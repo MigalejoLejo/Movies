@@ -10,8 +10,8 @@ import Alamofire
 
 
 final class ApiService {
-    static let api_key = "204d0575f0b77a6ce275bc3e63fa1f17"
-    static let base_url = "https://api.themoviedb.org/3/"
+    static let api_key = Env.api_key
+    static let base_url = Env.base_url
 
     
     static func get <T:Codable> (endpoint:String, parameters: [String: Any] = [:], callback:@escaping (T) -> Void){
