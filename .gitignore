@@ -1,0 +1,10 @@
+# Mac OS X
+*.DS_Store
+
+# Xcode
+Env/
+Env/Env.Swift
+
+# Backup files
+*~.nib
+

@@ -177,6 +177,7 @@
 				496364902A2DC252009BCB9A /* Preview Content */,
 				4963648E2A2DC252009BCB9A /* Assets.xcassets */,
 				492653512A2F8CD700C1B089 /* Info.plist */,
+				49AD7A1D2A4311EB00A75190 /* Env */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -210,7 +211,6 @@
 		496364A32A2E33C4009BCB9A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				49AD7A1D2A4311EB00A75190 /* Env */,
 				492653742A30E05700C1B089 /* Models */,
 				4926534A2A2F892A00C1B089 /* UserService.swift */,
 				4926534C2A2F893E00C1B089 /* ApiService.swift */,
