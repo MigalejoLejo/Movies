@@ -10,8 +10,8 @@ import Alamofire
 
 
 final class ApiService {
-    static let api_key = "204d0575f0b77a6ce275bc3e63fa1f17"
-    static let base_url = "https://api.themoviedb.org/3/"
+    static let api_key = Env.api_key
+    static let base_url = Env.base_url
 
     
     static func get <T:Codable> (endpoint:String, parameters: [String: Any] = [:], callback:@escaping (T) -> Void){
@@ -20,12 +20,15 @@ final class ApiService {
         
         AF.request(base_url+endpoint, method: .get, parameters: params).responseDecodable(of:T.self, queue: .main){ result in
             if let error = result.error {
+                print("error calling api get")
                 print(error.localizedDescription)
+                print(result)
                 return
             }
             
             if let value = result.value {
                 callback(value)
+                
             } else {
                 print("get request on ApiService didn't return a value.")
             }

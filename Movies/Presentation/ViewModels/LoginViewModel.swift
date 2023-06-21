@@ -25,7 +25,6 @@ class LoginViewModel: ObservableObject {
             self.isLogging = false
             
         })
-        
     }
     
     func validate() -> Bool{

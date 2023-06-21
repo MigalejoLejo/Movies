@@ -7,9 +7,7 @@
 
 import Foundation
 
-enum ResultType: String {
-    case tv, movie, person
-}
+
 
 struct Result: Identifiable, Hashable {
     let uuid = UUID()

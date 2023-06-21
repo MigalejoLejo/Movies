@@ -9,9 +9,11 @@ import SwiftUI
 
 struct Search: View {
     
+    @ObservedObject var model = SearchViewModel()
+
     @State var searchItem = ""
-    @State private var selectedContent: ResultType = .movie
-    
+    @State var selectedContent: ResultType = .movie
+
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -24,27 +26,23 @@ struct Search: View {
     
     var body: some View {
         VStack{
-           SearchField(searchItem: $searchItem)
+            SearchField(model: model, searchItem: $searchItem, selectedContent: $selectedContent)
                 .onSubmit {
-                    results = Dummy.getResults(30)
                 }
             
-            if !searchItem.isEmpty {
-                Picker("Search", selection: $selectedContent) {
-                    Text("Movie").tag(ResultType.movie)
-                    Text("TV").tag(ResultType.tv)
-                   }
-                .pickerStyle(.segmented)
-            }
-          
-            ScrollView{
-                    LazyVGrid(columns: columns){
-                        ForEach(results, id: \.uuid) { result in
-                            ImageCard(result: result)
-                        }
+           
+            ScrollView(.vertical){
+                LazyVGrid(columns: columns) {
+                    ForEach(model.results, id: \.uuid) { card in
+                        Card(result:card).toDetailsView(result: card)
                     }
-                
+                    Text("").onAppear{
+                        model.getMoreResults()
+                    }
+                }
             }
+            
+            
         }
         .padding(.horizontal)
         .navigationBarTitleDisplayMode(.inline)

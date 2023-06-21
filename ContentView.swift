@@ -8,32 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    // Userservice
-    // si tenemos sessionid != nil entrar a home view
     
-    @State var resultText:String = Dummy.messages
-    @State var isLoggedIn: Bool = UserService.sharedInstance.isLoggedIn
+//    @State var resultText:String = Dummy.messages
 
+    @ObservedObject var us:UserService = .sharedInstance
     
     var body: some View {
-        NavigationView{
-            if isLoggedIn {
-                MainNav()
+       
+        NavigationStack {
+        if us.isLoggedIn {
+                HomeView()
             } else {
                 Login()
             }
         }
-        .onReceive(UserService.sharedInstance.$isLoggedIn) { value in
-            isLoggedIn = value
-        }
-       
-       
+        
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ContentView()
     }
