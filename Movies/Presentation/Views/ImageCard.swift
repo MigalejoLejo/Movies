@@ -10,27 +10,21 @@ import SwiftUI
 struct ImageCard: View {
     
     let result:Result
+    var baseURL:String = "https://image.tmdb.org/t/p/w500/"
     
     var width:CGFloat = 110
     var height:CGFloat = 160
     var alpha:CGFloat = 0.45
     
-    
-    
-    
     var body: some View {
         VStack (alignment: .leading){
-            
-            Img(url: result.image, width: width, height: height)
-            
+            Img(url: "\(baseURL)\(result.image)", width: width, height: height)
             VStack(alignment: .leading, spacing: 3){
                 Text(result.title)
                     .font(.headline)
                     .lineLimit(2)
-                
                 if let subtitle = result.subtitle {
-                    Text(subtitle)
-                        .lineLimit(1)
+                    Text(subtitle).lineLimit(1)
                 }
             }
             .frame(minHeight: alpha*height, alignment: .top)
@@ -40,12 +34,7 @@ struct ImageCard: View {
 }
 
 
-
-
-
-
 struct ImageCard_Previews: PreviewProvider {
-    
     static var result = Dummy.getResult()
     
     static var previews: some View {

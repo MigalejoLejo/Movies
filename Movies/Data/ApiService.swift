@@ -20,12 +20,15 @@ final class ApiService {
         
         AF.request(base_url+endpoint, method: .get, parameters: params).responseDecodable(of:T.self, queue: .main){ result in
             if let error = result.error {
+                print("error calling api get")
                 print(error.localizedDescription)
+                print(result)
                 return
             }
             
             if let value = result.value {
                 callback(value)
+                
             } else {
                 print("get request on ApiService didn't return a value.")
             }
