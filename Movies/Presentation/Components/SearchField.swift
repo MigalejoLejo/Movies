@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchField: View {
 
     var title:String = "Search"
-    @StateObject var model:SearchViewModel
+//    @StateObject var model:SearchViewModel
     
     @Binding var searchItem:String
     @Binding var selectedContent: ResultType
@@ -29,7 +29,7 @@ struct SearchField: View {
                     TextField(title, text: $input)
                         .onSubmit {
                             searchItem = input
-                            model.search(item: searchItem, in: selectedContent.rawValue)
+//                            model.search(item: searchItem, in: selectedContent.rawValue)
                         }
                         .focused($isFocused)
                     
@@ -75,7 +75,7 @@ struct SearchField: View {
                 .pickerStyle(.segmented)
                 .onChange(of: selectedContent, perform: { newValue in
                     searchItem = input
-                    model.search(item: searchItem, in: selectedContent.rawValue)
+//                    model.search(item: searchItem, in: selectedContent.rawValue)
 
                 })
             }
@@ -91,6 +91,6 @@ struct SearchField_Previews: PreviewProvider {
     @ObservedObject static var model = SearchViewModel()
 
     static var previews: some View {
-        SearchField(model: model, searchItem: $searchItem, selectedContent: $selectedContent)
+        SearchField(searchItem: $searchItem, selectedContent: $selectedContent)
     }
 }

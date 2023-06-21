@@ -15,20 +15,21 @@ class ImageCardRowViewModel: ObservableObject {
     var page:Int = 1
     var title:String
     var totalPages:Int = 1
-    
-    
+
     var endpoint:Endpoint {
         return Endpoint(path: "\(path)?page=\(page)", title: title)
     }
-       
+     
+    
+    
     init(path: String, title: String) {
         self.path = path
         self.title = title
     }
     
+    
+    
     func fetchResults() {
-        
-        
         ApiService.get(endpoint: endpoint.path){ (resultList:ResultList) in
             self.results = resultList.results
             self.totalPages = resultList.totalPages ?? 0

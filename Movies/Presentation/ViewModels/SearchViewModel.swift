@@ -13,11 +13,13 @@ class SearchViewModel: ObservableObject {
     var params: [String:Any] = [:]
     
     @Published var results: [Result] = []
-    var page:Int = -1
-    var totalPages:Int = 1
+   
+    @Published var page:Int = 0
+    var totalPages:Int = 0
     var item: String = ""
     var category: String = ""
     var endpoint:String = ""
+    var canLookForMore: Bool = false
     
     
     func search(item: String, in category:String){
@@ -25,21 +27,24 @@ class SearchViewModel: ObservableObject {
         self.item = item
         self.category = category
         endpoint = "search/\(category)"
+        print("searching ")
 
         ApiService.get(endpoint: endpoint, parameters: params){ (resultList: ResultList) in
             self.results = resultList.results
             self.totalPages = resultList.totalPages ?? 0
         }
-        page = 0
+        page = 1
     }
     
     func getMoreResults(){
-        page += 1
+        if page < totalPages {
+            page += 1
+        }
+        
         params = ["query": item, "page": page]
-       
-    
+        print("searching more")
 
-        if page <= totalPages {
+        if page > 1 && page < totalPages {
             ApiService.get(endpoint:endpoint, parameters: params ){ (resultList:ResultList) in
                 self.results.append(contentsOf: resultList.results)
             }
