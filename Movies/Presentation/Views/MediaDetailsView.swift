@@ -138,31 +138,6 @@ extension MediaDetailsView{
     func trailerRow(videos: Videos?) -> some View {
 
         if videos?.results.count ?? 0 > 0 {
-//            ScrollView (.horizontal){
-//                HStack{
-//                    ForEach(videos?.results.prefix(5) ?? [], id: \.id) { video in
-//
-//                        let youTubePlayer: YouTubePlayer = YouTubePlayer(stringLiteral:  "https://www.youtube.com/watch?v=\(video.key ?? "")")
-//                        YouTubePlayerView(youTubePlayer) { state in
-//                            // Overlay ViewBuilder closure to place an overlay View
-//                            // for the current `YouTubePlayer.State`
-//                            switch state {
-//                            case .idle:
-//                                ProgressView()
-//                            case .ready:
-//                                EmptyView()
-//                            case .error(_):
-//                                Text(verbatim: "YouTube player couldn't be loaded")
-//                            }
-//                        }
-//                        .frame(width: 400, height: 200)
-//                        .background(.gray)
-//                        .padding(.vertical)
-//                    }
-//                }
-//                .padding(.horizontal)
-//            }
-            
             VStack(alignment: .leading, spacing: .zero){
                 
                 Text("Trailers")
@@ -191,7 +166,7 @@ extension MediaDetailsView{
     @ViewBuilder
     func seasonRow(seasons: [Season]?) -> some View {
         if let seasons = seasons, seasons.count > 0 {
-            
+            Text("Seasons")
         }
         
         
