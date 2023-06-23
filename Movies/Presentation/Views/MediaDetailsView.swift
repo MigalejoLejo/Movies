@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-import YouTubePlayerKit
-
+import Kingfisher
 struct MediaDetailsView: View {
     
     @ObservedObject var model: MediaDetailsViewModel
@@ -39,7 +38,7 @@ struct MediaDetailsView: View {
                         
                         PosterRow(results: details.similar?.results, title: "Similar", type: .movie)
                         
-                        seasonRow(seasons: details.seasons)
+                        seasonRow(seasons: details.seasons?.reversed(), proxy: proxy)
                         
                     }
                 }
@@ -164,16 +163,87 @@ extension MediaDetailsView{
     }
     
     @ViewBuilder
-    func seasonRow(seasons: [Season]?) -> some View {
+    func seasonRow(seasons: [Season]?, proxy:GeometryProxy) -> some View {
+
         if let seasons = seasons, seasons.count > 0 {
-            Text("Seasons")
+            VStack (alignment: .leading, spacing: 10){
+                Group{
+                    Text("Seasons")
+                        .font(.title2)
+                        .bold()
+                    if let season = seasons.first {
+                        seasonCard(season: season, height: 220)
+                    }
+                }
+                .padding(.horizontal)
+                
+                
+                if seasons.count > 1 {
+                    ScrollView(.horizontal){
+                        HStack (spacing: 13){
+                            ForEach(seasons, id: \.id){ season in
+                                seasonCard(season: season, width: 270, height: 180)
+                            }
+                        }
+                        .padding(.horizontal)
+
+                    
+                    }
+                    .frame(height: 180)
+                    .padding(.top, 3)
+
+                }
+                
+            }
         }
-        
         
     }
     
     @ViewBuilder
-    func seassonCard(seasons: [Season], width: CGFloat, height: CGFloat) -> some View {}
+    func seasonCard(season: Season, width: CGFloat? = nil, height: CGFloat) -> some View {
+        let baseUrl = "https://image.tmdb.org/t/p/w500/"
+
+        GeometryReader{ proxy in
+            
+            Img(
+                url: "\(baseUrl)\(season.posterPath ?? "")",
+                width: proxy.frame(in: .local).width,
+                height: proxy.frame(in: .local).height,
+                mode: .fill,
+                alignment: .top
+
+            )
+            
+            
+            .overlay (
+                ZStack (alignment: .bottomLeading){
+                    
+                    LinearGradient(colors: [.clear, .black.opacity(0.5), .black], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    
+                    VStack (alignment: .leading){
+                        Text(season.name ?? "")
+                            .font(.title2)
+                            .bold()
+                        HStack{
+                            Text((season.episodeCount?.description ?? "") + " Episodes")
+                            Text(" | ")
+                            Text(MyDateFormatter.format(this: season.airDate ?? ""))
+                        }
+                        .bold()
+                       
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                }
+            )
+            .cornerRadius(10)
+
+        }
+        .frame(width:width, height:height)
+       
+        
+        
+    }
     
 
 }

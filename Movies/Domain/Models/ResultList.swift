@@ -35,7 +35,7 @@ struct MovieResult: Resultable {
     var originalLanguage: String
     var overview: String
     var popularity: Double
-    var posterPath: String
+    var posterPath: String?
     @Nullable var voteAverage: Double?
     var voteCount: Int
     
@@ -69,7 +69,7 @@ struct MovieResult: Resultable {
                 id: id,
                 title: title,
                 subtitle: MyDateFormatter.format(this: releaseDate ?? ""),
-                image: posterPath,
+                image: posterPath ?? "",
                 type: .movie)
         }
     

@@ -28,6 +28,12 @@
 		492653732A30DC5B00C1B089 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492653722A30DC5B00C1B089 /* Authentication.swift */; };
 		4927B1552A2F2A690088F83A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927B1542A2F2A690088F83A /* Login.swift */; };
 		4927B1572A2F2BA60088F83A /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927B1562A2F2BA60088F83A /* InputField.swift */; };
+		495726A82A446A7900D9BD42 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 495726A72A446A7900D9BD42 /* Lottie */; };
+		495726AA2A446AF200D9BD42 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495726A92A446AF200D9BD42 /* LottieView.swift */; };
+		495726AD2A44719800D9BD42 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 495726AC2A44719800D9BD42 /* loading.json */; };
+		495726B12A44A49900D9BD42 /* action.json in Resources */ = {isa = PBXBuildFile; fileRef = 495726B02A44A49900D9BD42 /* action.json */; };
+		495726B32A44A94400D9BD42 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495726B22A44A94400D9BD42 /* Credits.swift */; };
+		495726B72A4586D200D9BD42 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495726B62A4586D200D9BD42 /* LoadingView.swift */; };
 		4963648B2A2DC251009BCB9A /* MovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963648A2A2DC251009BCB9A /* MovieApp.swift */; };
 		4963648D2A2DC251009BCB9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963648C2A2DC251009BCB9A /* ContentView.swift */; };
 		4963648F2A2DC252009BCB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4963648E2A2DC252009BCB9A /* Assets.xcassets */; };
@@ -81,6 +87,11 @@
 		492653722A30DC5B00C1B089 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		4927B1542A2F2A690088F83A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4927B1562A2F2BA60088F83A /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		495726A92A446AF200D9BD42 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		495726AC2A44719800D9BD42 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		495726B02A44A49900D9BD42 /* action.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = action.json; sourceTree = "<group>"; };
+		495726B22A44A94400D9BD42 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		495726B62A4586D200D9BD42 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		496364872A2DC251009BCB9A /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4963648A2A2DC251009BCB9A /* MovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApp.swift; sourceTree = "<group>"; };
 		4963648C2A2DC251009BCB9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +134,7 @@
 				497FBD8B2A4037AB008D3EF0 /* YouTubePlayerKit in Frameworks */,
 				492653712A30D4E400C1B089 /* CodableX in Frameworks */,
 				4926536E2A30D4B700C1B089 /* KeychainAccess in Frameworks */,
+				495726A82A446A7900D9BD42 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +160,16 @@
 				492653722A30DC5B00C1B089 /* Authentication.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		495726AB2A44718500D9BD42 /* Lottie+Animations */ = {
+			isa = PBXGroup;
+			children = (
+				495726A92A446AF200D9BD42 /* LottieView.swift */,
+				495726B02A44A49900D9BD42 /* action.json */,
+				495726AC2A44719800D9BD42 /* loading.json */,
+			);
+			path = "Lottie+Animations";
 			sourceTree = "<group>";
 		};
 		4963647E2A2DC251009BCB9A = {
@@ -193,17 +215,9 @@
 		496364982A2E1747009BCB9A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				492653422A2F565000C1B089 /* SearchField.swift */,
-				496364A92A2E39D5009BCB9A /* Img.swift */,
-				4927B1562A2F2BA60088F83A /* InputField.swift */,
-				492653362A2F376E00C1B089 /* LoginThumbnail.swift */,
-				492653382A2F460E00C1B089 /* WarningComponent.swift */,
-				497FBD872A3C4F3A008D3EF0 /* BackdropImg.swift */,
-				49A486962A41A03600209D5B /* NavigationLable.swift */,
-				49A486982A41A06300209D5B /* Card.swift */,
-				49AD7A172A42EE8500A75190 /* DismissSheetButton.swift */,
-				49AD7A192A42F4A300A75190 /* PosterRow.swift */,
-				49AD7A1B2A43014300A75190 /* ImagesTabNav.swift */,
+				495726AB2A44718500D9BD42 /* Lottie+Animations */,
+				49AD7A222A43507400A75190 /* Images+Rows+More */,
+				49AD7A202A434A5200A75190 /* General */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,15 +276,11 @@
 			children = (
 				4927B1542A2F2A690088F83A /* Login.swift */,
 				4926533C2A2F506E00C1B089 /* HomeView.swift */,
-				496364A12A2E32F0009BCB9A /* ImageCard.swift */,
-				496364AF2A2E457A009BCB9A /* ImageCardRow.swift */,
-				497FBD812A3B1EBD008D3EF0 /* ImageCardRowMore.swift */,
 				4974ABC22A3A15E30076A9EF /* MediaDetailsView.swift */,
 				49A4868C2A407A2200209D5B /* PersonDetailsView.swift */,
-				49A486922A40C0E200209D5B /* PersonImagesRow.swift */,
-				497FBD8E2A40645A008D3EF0 /* MediaDetailsRowMore.swift */,
 				4926533F2A2F53C400C1B089 /* Search.swift */,
-				49AD7A152A420BF900A75190 /* WebView.swift */,
+				495726B22A44A94400D9BD42 /* Credits.swift */,
+				495726B62A4586D200D9BD42 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +306,37 @@
 			path = Env;
 			sourceTree = "<group>";
 		};
+		49AD7A202A434A5200A75190 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				49AD7A152A420BF900A75190 /* WebView.swift */,
+				492653422A2F565000C1B089 /* SearchField.swift */,
+				4927B1562A2F2BA60088F83A /* InputField.swift */,
+				492653362A2F376E00C1B089 /* LoginThumbnail.swift */,
+				492653382A2F460E00C1B089 /* WarningComponent.swift */,
+				49A486962A41A03600209D5B /* NavigationLable.swift */,
+				49AD7A172A42EE8500A75190 /* DismissSheetButton.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		49AD7A222A43507400A75190 /* Images+Rows+More */ = {
+			isa = PBXGroup;
+			children = (
+				496364A92A2E39D5009BCB9A /* Img.swift */,
+				49A486982A41A06300209D5B /* Card.swift */,
+				497FBD872A3C4F3A008D3EF0 /* BackdropImg.swift */,
+				496364A12A2E32F0009BCB9A /* ImageCard.swift */,
+				496364AF2A2E457A009BCB9A /* ImageCardRow.swift */,
+				497FBD812A3B1EBD008D3EF0 /* ImageCardRowMore.swift */,
+				497FBD8E2A40645A008D3EF0 /* MediaDetailsRowMore.swift */,
+				49AD7A192A42F4A300A75190 /* PosterRow.swift */,
+				49A486922A40C0E200209D5B /* PersonImagesRow.swift */,
+				49AD7A1B2A43014300A75190 /* ImagesTabNav.swift */,
+			);
+			path = "Images+Rows+More";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +359,7 @@
 				4926536D2A30D4B700C1B089 /* KeychainAccess */,
 				492653702A30D4E400C1B089 /* CodableX */,
 				497FBD8A2A4037AB008D3EF0 /* YouTubePlayerKit */,
+				495726A72A446A7900D9BD42 /* Lottie */,
 			);
 			productName = Movie;
 			productReference = 496364872A2DC251009BCB9A /* Movies.app */;
@@ -353,6 +395,7 @@
 				4926536C2A30D4B700C1B089 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				4926536F2A30D4E400C1B089 /* XCRemoteSwiftPackageReference "CodableX" */,
 				497FBD892A4037AB008D3EF0 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+				495726A62A446A7900D9BD42 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 496364882A2DC251009BCB9A /* Products */;
 			projectDirPath = "";
@@ -369,7 +412,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				496364922A2DC252009BCB9A /* Preview Assets.xcassets in Resources */,
+				495726B12A44A49900D9BD42 /* action.json in Resources */,
 				4963648F2A2DC252009BCB9A /* Assets.xcassets in Resources */,
+				495726AD2A44719800D9BD42 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +430,7 @@
 				496364B02A2E457A009BCB9A /* ImageCardRow.swift in Sources */,
 				4926534B2A2F892A00C1B089 /* UserService.swift in Sources */,
 				4926533B2A2F47E800C1B089 /* Warning.swift in Sources */,
+				495726B72A4586D200D9BD42 /* LoadingView.swift in Sources */,
 				496364B32A2F2243009BCB9A /* Dummy.swift in Sources */,
 				492653472A2F842700C1B089 /* LoginViewModel.swift in Sources */,
 				49AD7A1C2A43014300A75190 /* ImagesTabNav.swift in Sources */,
@@ -400,6 +446,7 @@
 				4963648D2A2DC251009BCB9A /* ContentView.swift in Sources */,
 				492653732A30DC5B00C1B089 /* Authentication.swift in Sources */,
 				49A486952A41993E00209D5B /* SearchViewModel.swift in Sources */,
+				495726B32A44A94400D9BD42 /* Credits.swift in Sources */,
 				49A4868D2A407A2200209D5B /* PersonDetailsView.swift in Sources */,
 				497FBD882A3C4F3A008D3EF0 /* BackdropImg.swift in Sources */,
 				49080F982A376E94007F130F /* HomeViewModel.swift in Sources */,
@@ -423,6 +470,7 @@
 				496364AA2A2E39D5009BCB9A /* Img.swift in Sources */,
 				496364A72A2E35B7009BCB9A /* Result.swift in Sources */,
 				4974ABBF2A3A135A0076A9EF /* View+Extensions.swift in Sources */,
+				495726AA2A446AF200D9BD42 /* LottieView.swift in Sources */,
 				4927B1552A2F2A690088F83A /* Login.swift in Sources */,
 				492653402A2F53C400C1B089 /* Search.swift in Sources */,
 			);
@@ -653,6 +701,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		495726A62A446A7900D9BD42 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		496364AC2A2E3BED009BCB9A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -686,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4926536F2A30D4E400C1B089 /* XCRemoteSwiftPackageReference "CodableX" */;
 			productName = CodableX;
+		};
+		495726A72A446A7900D9BD42 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 495726A62A446A7900D9BD42 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		496364AD2A2E3BED009BCB9A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

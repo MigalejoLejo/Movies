@@ -17,6 +17,7 @@ struct Img: View {
     var radius:CGFloat = 10
     var mode:SwiftUI.ContentMode = .fill
     var placeholder:String = "placeholder-poster"
+    var alignment:Alignment = .center
     
    
     var body: some View {
@@ -29,7 +30,7 @@ struct Img: View {
             .cacheOriginalImage()
             .resizable()
             .aspectRatio(contentMode: mode)
-            .frame(width: width, height: height)
+            .frame(width: width, height: height, alignment: alignment)
             .clipped()
             .cornerRadius(radius)
             .shadow(radius: shadow)
@@ -38,7 +39,8 @@ struct Img: View {
 
 
 struct Img_Previews: PreviewProvider {
-    static var url = "https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+   
+    static var url = "\(Env.image_url)\(ImageSize.w500)/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
     
     static var previews: some View {
         Img(url: url)

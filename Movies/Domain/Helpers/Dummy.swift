@@ -32,6 +32,6 @@ struct Dummy {
     }
     
     static func getWarning(color: Color = .red, message: String = "This is a dummy warning") -> Warning {
-        return Warning(type: .warning, color: color, message:message)
+        return Warning(type: .logging, color: color, message:message)
     }
 }

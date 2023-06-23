@@ -9,40 +9,59 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var mainViewModel = HomeViewModel()
+    @StateObject var model: HomeViewModel
     @State var showFullToolbar = true
+    @Binding var isLoading: Bool
+    
+    
     
     var body: some View {
-        ScrollView{
-            ForEach(mainViewModel.rows) { row in
-                ImageCardRow(title: row.title, imageCards: row.list.results, endpoint: row.endpoint , type: .movie)
-            }
-        }
-        .navigationTitle("Home")
-        .edgesIgnoringSafeArea(.bottom)
-        .scrollIndicators(.hidden)
-        .toolbar{
-            ToolbarItem(placement:.navigationBarLeading){
-                Button("Logout"){
-                    mainViewModel.logout()
+        GeometryReader { proxy in
+            NavigationStack{
+                
+                ZStack{
+                    
+                    ScrollView{
+                        ForEach(model.rows) { row in
+                            ImageCardRow(title: row.title, imageCards: row.list.results, endpoint: row.endpoint , type: .movie)
+                        }
+                    }
+                 
+                    .navigationTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .edgesIgnoringSafeArea(.bottom)
+                    .scrollIndicators(.hidden)
+                    .toolbar{
+                            ToolbarItem(placement:.navigationBarLeading){
+                                Button(isLoading ? "" : "Logout"){
+                                        model.logout()
+                                        model.rows = []
+                                    }
+                                
+                            }
+                            ToolbarItem(placement: .navigationBarTrailing){
+                                NavigationLink(destination: Search()){
+                                    Image(systemName: isLoading ? "" : "magnifyingglass")
+                                }
+                            
+                        }
+                    }
+                    
                 }
-            }
-            ToolbarItem(placement: .navigationBarTrailing){
-                NavigationLink(destination: Search()){
-                    Image(systemName: "magnifyingglass")
-                }
-            }
-        }
-        .onAppear{
-            if mainViewModel.rows.isEmpty {
-                mainViewModel.fetchLists()
+                
+                
+                
+               
             }
         }
     }
 }
 
 struct MainNav_Previews: PreviewProvider {
+    @ObservedObject static var testModel = HomeViewModel()
+    @State static var isLoading:Bool = true
+
     static var previews: some View {
-        HomeView()
+        HomeView(model: testModel, isLoading: $isLoading)
     }
 }

@@ -121,15 +121,6 @@ struct MovieDetails: MediaDetails {
             videos: videos
         )
     }
-    
-//    var result: Result {
-//            .init(
-//                id: id,
-//                title: title,
-//                subtitle: MyDateFormatter.format(this: releaseDate ?? ""),
-//                image: posterPath ?? "",
-//                type: .movie)
-//        }
 }
 
 // MARK: - TVDetails
@@ -201,15 +192,7 @@ struct TVDetails: MediaDetails {
     var details: DetailsWrapper {
         .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: MyDateFormatter.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos: videos)
     }
-    
-//    var result: Result {
-//            .init(
-//                id: id ?? 0,
-//                title: name ?? "",
-//                subtitle:"✩ " + (popularity?.description ?? ""),
-//                image: posterPath ?? "",
-//                type: .tv)
-//        }
+   
 }
 
 // MARK: - PeopleDetails

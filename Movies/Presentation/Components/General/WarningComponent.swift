@@ -22,10 +22,10 @@ struct WarningComponent: View {
         }
         
         if warning.type == .logging {
-            HStack (alignment: .top){
-                ProgressView()
-                Text("Logging in")
-                    .foregroundColor(.black)
+            VStack (){
+                LottieView(name:"loading.json")
+                    .frame(height: 180)
+
             }
         }
        
@@ -33,8 +33,10 @@ struct WarningComponent: View {
 }
 
 struct WarningComponent_Previews: PreviewProvider {
-    @State static var warning = Dummy.getWarning(message: "This is ")
+    @State static var warning = Dummy.getWarning(message: "This is a warning")
+
     static var previews: some View {
+
         WarningComponent(warning: $warning)
     }
 }

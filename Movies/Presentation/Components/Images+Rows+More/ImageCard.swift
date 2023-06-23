@@ -10,7 +10,7 @@ import SwiftUI
 struct ImageCard: View {
     
     let result:Result
-    var baseURL:String = "https://image.tmdb.org/t/p/w500/"
+    var baseURL:String = Env.image_url+ImageSize.w500.rawValue 
     
     var width:CGFloat = 110
     var height:CGFloat = 160

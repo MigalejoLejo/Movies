@@ -19,6 +19,7 @@ final class ApiService {
         params["api_key"] = api_key
         
         AF.request(base_url+endpoint, method: .get, parameters: params).responseDecodable(of:T.self, queue: .main){ result in
+            
             if let error = result.error {
                 print("error calling api get")
                 print(error.localizedDescription)

@@ -10,6 +10,7 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
     
     @Published var rows:[HomeRow] = []
+    @Published var isLoading = false
     
     var endpoints:[Endpoint] = [
         Endpoint(path: "movie/popular", title: "Popular Movies"),
@@ -30,9 +31,20 @@ class HomeViewModel: ObservableObject {
     }
     
     func fetchLists() {
+        isLoading = true
+
+
+        var count = 0
         for endpoint in endpoints {
             ApiService.get(endpoint: endpoint.path){ (resultList:ResultList) in
                 self.rows.append(.init(title: endpoint.title, list: resultList, params: endpoint.params, endpoint: endpoint.path))
+            }
+            count += 1
+            if count == endpoints.count-1 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    self.isLoading = false
+                   
+                }
             }
         }
     }

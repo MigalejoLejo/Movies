@@ -71,6 +71,7 @@ struct SearchField: View {
                 Picker("Search", selection: $selectedContent) {
                     Text("Movie").tag(ResultType.movie)
                     Text("TV").tag(ResultType.tv)
+                    Text("Person").tag(ResultType.person)
                    }
                 .pickerStyle(.segmented)
                 .onChange(of: selectedContent, perform: { newValue in

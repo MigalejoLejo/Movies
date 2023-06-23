@@ -32,6 +32,10 @@ struct PersonDetailsView: View {
 }
 
 
+
+
+
+
 extension PersonDetailsView{
     @ViewBuilder
     func Header(proxy: GeometryProxy, path:String) -> some View{

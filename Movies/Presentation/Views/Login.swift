@@ -25,9 +25,13 @@ struct Login: View {
 
                 InputField(input: $loginViewModel.password, isSecure: true, fieldTitle: "password")
                 
-                if showWarning {
-                    WarningComponent (warning: $warning)
+                VStack{
+                    if showWarning {
+                        WarningComponent (warning: $warning)
+                    }
                 }
+                .frame(height: 180)
+              
                             
                 Spacer()
                 

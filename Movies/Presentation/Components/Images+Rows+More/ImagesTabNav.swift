@@ -19,9 +19,9 @@ struct ImagesTabNav: View {
         ZStack{
             TabView(selection: $imageIndex){
                 ForEach(images.indices, id: \.self) { index in
-                    KFImage(URL(string:"https://image.tmdb.org/t/p/w500/\(images[index].filePath ?? "")"))
+                    KFImage(URL(string:"\(Env.image_url)\(ImageSize.w500)/\(images[index].filePath ?? "")"))
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(maxHeight: .greatestFiniteMagnitude)
                         .onAppear{print(imageIndex)}
                         .tag(index)
@@ -29,6 +29,7 @@ struct ImagesTabNav: View {
             }
             .tabViewStyle(PageTabViewStyle())
             DismissSheetButton(isPresented: $isPresented)
+                .shadow(radius: 8)
         }
         .background(.black)
     }
