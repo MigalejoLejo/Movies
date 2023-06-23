@@ -35,7 +35,7 @@ struct ContentView: View {
                                     .tag(0)
                                 
                                 CreditsView()
-                                    .tabItem {Label("Credits", systemImage: "house")}
+                                    .tabItem {Label("Credits", systemImage: "gear")}
                                     .tag(1)
                             }
                         }

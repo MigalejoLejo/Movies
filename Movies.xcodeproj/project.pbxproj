@@ -55,7 +55,7 @@
 		497FBD8F2A40645A008D3EF0 /* MediaDetailsRowMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FBD8E2A40645A008D3EF0 /* MediaDetailsRowMore.swift */; };
 		49A4868D2A407A2200209D5B /* PersonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A4868C2A407A2200209D5B /* PersonDetailsView.swift */; };
 		49A4868F2A407AB000209D5B /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A4868E2A407AB000209D5B /* PersonDetailsViewModel.swift */; };
-		49A486912A40B86900209D5B /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486902A40B86900209D5B /* MyDateFormatter.swift */; };
+		49A486912A40B86900209D5B /* MyDateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486902A40B86900209D5B /* MyDateTools.swift */; };
 		49A486932A40C0E200209D5B /* PersonImagesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486922A40C0E200209D5B /* PersonImagesRow.swift */; };
 		49A486952A41993E00209D5B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486942A41993E00209D5B /* SearchViewModel.swift */; };
 		49A486972A41A03600209D5B /* NavigationLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486962A41A03600209D5B /* NavigationLable.swift */; };
@@ -112,7 +112,7 @@
 		497FBD8E2A40645A008D3EF0 /* MediaDetailsRowMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsRowMore.swift; sourceTree = "<group>"; };
 		49A4868C2A407A2200209D5B /* PersonDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsView.swift; sourceTree = "<group>"; };
 		49A4868E2A407AB000209D5B /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
-		49A486902A40B86900209D5B /* MyDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDateFormatter.swift; sourceTree = "<group>"; };
+		49A486902A40B86900209D5B /* MyDateTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDateTools.swift; sourceTree = "<group>"; };
 		49A486922A40C0E200209D5B /* PersonImagesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonImagesRow.swift; sourceTree = "<group>"; };
 		49A486942A41993E00209D5B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		49A486962A41A03600209D5B /* NavigationLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLable.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 				49080F9D2A377146007F130F /* Types.swift */,
 				49080F9F2A37734C007F130F /* HomeRow.swift */,
 				49080FA32A3773E9007F130F /* Endpoints.swift */,
-				49A486902A40B86900209D5B /* MyDateFormatter.swift */,
+				49A486902A40B86900209D5B /* MyDateTools.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -461,7 +461,7 @@
 				49A486992A41A06300209D5B /* Card.swift in Sources */,
 				49080F9E2A377146007F130F /* Types.swift in Sources */,
 				497FBD842A3B20BB008D3EF0 /* ImageCardRowViewModel.swift in Sources */,
-				49A486912A40B86900209D5B /* MyDateFormatter.swift in Sources */,
+				49A486912A40B86900209D5B /* MyDateTools.swift in Sources */,
 				4974ABC52A3A15F60076A9EF /* MediaDetailsViewModel.swift in Sources */,
 				4974ABC32A3A15E30076A9EF /* MediaDetailsView.swift in Sources */,
 				49080FA02A37734C007F130F /* HomeRow.swift in Sources */,

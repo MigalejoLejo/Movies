@@ -19,6 +19,7 @@ struct Img: View {
     var placeholder:String = "placeholder-poster"
     var alignment:Alignment = .center
     
+    
    
     var body: some View {
         KFImage(URL(string:url))

@@ -11,6 +11,8 @@ struct MediaDetailsView: View {
     
     @ObservedObject var model: MediaDetailsViewModel
     @State var isExpanded:Bool = false
+    @State var isPresented = false
+
     
     init(id: Int, type: ResultType){
         model = MediaDetailsViewModel(id: id, type: type)
@@ -22,10 +24,10 @@ struct MediaDetailsView: View {
                 ScrollView ( .vertical ) {
                     VStack (alignment: .center, spacing: .zero) {
                         
-                        backDrop(name: details.backdrop ?? "", width: proxy.size.width)
+                        backDrop(name: details.backdrop ?? details.poster ?? "", width: proxy.size.width)
                         
                         Group{
-                            poster(details:details)
+                            poster(details:details, proxy: proxy, isPresented: $isPresented)
                             tagline(details: details)
                             overview(details: details)
                         }
@@ -63,7 +65,7 @@ extension MediaDetailsView{
    
     
     @ViewBuilder
-    func poster(details: DetailsWrapper) -> some View {
+    func poster(details: DetailsWrapper, proxy: GeometryProxy, isPresented: Binding<Bool>) -> some View {
         let path:String = "https://image.tmdb.org/t/p/w500/\(details.poster ?? "")"
         let width:CGFloat = 110
         let height:CGFloat = 180
@@ -71,6 +73,16 @@ extension MediaDetailsView{
         HStack{
             Img(url: path, width: width, height: height)
                 .shadow(radius: 2)
+                .sheet(isPresented: $isPresented) {
+                    ZStack{
+                        Img(url:"https://image.tmdb.org/t/p/original/\(details.poster ?? "")" , width: proxy.size.width, height: proxy.size.height)
+                        DismissSheetButton(isPresented: $isPresented)
+                            .padding()
+                    }
+                }
+                .onTapGesture {
+                    isPresented.wrappedValue.toggle()
+                }
        
             VStack(alignment: .leading){
                
@@ -227,7 +239,7 @@ extension MediaDetailsView{
                         HStack{
                             Text((season.episodeCount?.description ?? "") + " Episodes")
                             Text(" | ")
-                            Text(MyDateFormatter.format(this: season.airDate ?? ""))
+                            Text(MyDateTools.format(this: season.airDate ?? ""))
                         }
                         .bold()
                        

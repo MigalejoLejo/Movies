@@ -24,6 +24,7 @@ struct BackdropImg: View {
             .placeholder{
                 Image(placeholder)
                     .resizable()
+                    .scaledToFit()
                     .frame(maxHeight: 200)
             }
             .cacheOriginalImage()
@@ -36,7 +37,7 @@ struct BackdropImg: View {
 
 
 struct BackdropImg_Previews: PreviewProvider {
-    static var url = "https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+    static var url = "https://image.tmdb.org/t/p/w500/"
     
     static var previews: some View {
         BackdropImg(url: url)

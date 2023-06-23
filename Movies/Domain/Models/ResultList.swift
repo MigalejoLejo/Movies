@@ -68,7 +68,7 @@ struct MovieResult: Resultable {
             .init(
                 id: id,
                 title: title,
-                subtitle: MyDateFormatter.format(this: releaseDate ?? ""),
+                subtitle: MyDateTools.format(this: releaseDate ?? ""),
                 image: posterPath ?? "",
                 type: .movie)
         }
@@ -111,7 +111,7 @@ struct TVResult: Resultable {
             .init(
                 id: id,
                 title: name,
-                subtitle:  MyDateFormatter.format(this: firstAirDate ?? ""),
+                subtitle:  MyDateTools.format(this: firstAirDate ?? ""),
                 image: posterPath ?? "",
                 type: .tv
         )

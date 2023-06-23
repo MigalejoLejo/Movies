@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 class PersonDetailsViewModel: ObservableObject {
@@ -27,8 +28,37 @@ class PersonDetailsViewModel: ObservableObject {
 
            
         }
-       
+    }
+    
+    func getBirthAndDeathDetails () -> some View{
+        var birhtAndDeathDetails = ""
         
+        if let age = MyDateTools.calculateAge(from:person?.birthday ?? "") {
+            if let deathDate = person?.deathday, !deathDate.isEmpty{
+                birhtAndDeathDetails = ("Died at \(age) years old \n")
+            } else {
+                birhtAndDeathDetails += ("\(age) years old \n")
+            }
+            birhtAndDeathDetails += ("Birthdate: \(MyDateTools.format(this: person?.birthday ?? "")) \n")
+               
+        }
+        
+        if let birthPlace = person?.placeOfBirth, !birthPlace.isEmpty {
+            birhtAndDeathDetails += ("Born in \(birthPlace) \n")
+               
+        }
+        
+        if let deathDate = person?.deathday, !deathDate.isEmpty{
+            birhtAndDeathDetails += ("Date of death: \(MyDateTools.format(this: deathDate)) \n")
+               
+            
+        }
+       
+        if birhtAndDeathDetails.isEmpty {
+            return Text("No birth or death information.")
+        } else {
+            return Text(birhtAndDeathDetails)
+        }
     }
     
 }

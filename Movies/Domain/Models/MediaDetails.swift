@@ -111,7 +111,7 @@ struct MovieDetails: MediaDetails {
             backdrop: backdropPath,
             poster: posterPath,
             overview: overview,
-            date: MyDateFormatter.format(this: releaseDate ?? ""),
+            date: MyDateTools.format(this: releaseDate ?? ""),
             tagline: tagline,
             status: status,
             recommendations: recommendations,
@@ -190,7 +190,7 @@ struct TVDetails: MediaDetails {
     }
     
     var details: DetailsWrapper {
-        .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: MyDateFormatter.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos: videos)
+        .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: MyDateTools.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos: videos)
     }
    
 }
@@ -202,6 +202,9 @@ struct PeopleDetails: Codable {
     let id: Int
     let knownForDepartment: String?
     let name: String?
+    let birthday:String?
+    let deathday: String?
+    let placeOfBirth:String?
     let originalName: String?
     let popularity: Double?
     let profilePath: String?
@@ -220,6 +223,9 @@ struct PeopleDetails: Codable {
         case adult, gender, id
         case knownForDepartment = "known_for_department"
         case name
+        case birthday
+        case deathday
+        case placeOfBirth = "place_of_birth"
         case originalName = "original_name"
         case popularity
         case profilePath = "profile_path"
