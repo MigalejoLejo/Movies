@@ -30,10 +30,10 @@
 		4927B1572A2F2BA60088F83A /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927B1562A2F2BA60088F83A /* InputField.swift */; };
 		495726A82A446A7900D9BD42 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 495726A72A446A7900D9BD42 /* Lottie */; };
 		495726AA2A446AF200D9BD42 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495726A92A446AF200D9BD42 /* LottieView.swift */; };
-		495726AD2A44719800D9BD42 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 495726AC2A44719800D9BD42 /* loading.json */; };
 		495726B12A44A49900D9BD42 /* action.json in Resources */ = {isa = PBXBuildFile; fileRef = 495726B02A44A49900D9BD42 /* action.json */; };
 		495726B32A44A94400D9BD42 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495726B22A44A94400D9BD42 /* Credits.swift */; };
 		495726B72A4586D200D9BD42 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495726B62A4586D200D9BD42 /* LoadingView.swift */; };
+		495726BB2A45AB2600D9BD42 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 495726BA2A45AB2600D9BD42 /* loading.json */; };
 		4963648B2A2DC251009BCB9A /* MovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963648A2A2DC251009BCB9A /* MovieApp.swift */; };
 		4963648D2A2DC251009BCB9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963648C2A2DC251009BCB9A /* ContentView.swift */; };
 		4963648F2A2DC252009BCB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4963648E2A2DC252009BCB9A /* Assets.xcassets */; };
@@ -88,10 +88,10 @@
 		4927B1542A2F2A690088F83A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4927B1562A2F2BA60088F83A /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		495726A92A446AF200D9BD42 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		495726AC2A44719800D9BD42 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		495726B02A44A49900D9BD42 /* action.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = action.json; sourceTree = "<group>"; };
 		495726B22A44A94400D9BD42 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		495726B62A4586D200D9BD42 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		495726BA2A45AB2600D9BD42 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		496364872A2DC251009BCB9A /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4963648A2A2DC251009BCB9A /* MovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApp.swift; sourceTree = "<group>"; };
 		4963648C2A2DC251009BCB9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			children = (
 				495726A92A446AF200D9BD42 /* LottieView.swift */,
 				495726B02A44A49900D9BD42 /* action.json */,
-				495726AC2A44719800D9BD42 /* loading.json */,
+				495726BA2A45AB2600D9BD42 /* loading.json */,
 			);
 			path = "Lottie+Animations";
 			sourceTree = "<group>";
@@ -413,8 +413,8 @@
 			files = (
 				496364922A2DC252009BCB9A /* Preview Assets.xcassets in Resources */,
 				495726B12A44A49900D9BD42 /* action.json in Resources */,
+				495726BB2A45AB2600D9BD42 /* loading.json in Resources */,
 				4963648F2A2DC252009BCB9A /* Assets.xcassets in Resources */,
-				495726AD2A44719800D9BD42 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
