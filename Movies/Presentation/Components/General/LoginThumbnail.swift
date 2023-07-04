@@ -12,7 +12,7 @@ struct LoginThumbnail: View {
         VStack{
             Text("🎬")
                 .font(.system(size: 80))
-            Text("Movie")
+            Text("superMOVIE")
                 .font(.system(size: 50))
                 .bold()
         }

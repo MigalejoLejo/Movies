@@ -29,8 +29,13 @@ struct MediaDetailsRowMore: View {
 }
 
 struct MediaDetailsRowMore_Previews: PreviewProvider {
-    @State static var images:[Result] = []
-    @State static var title = ""
+    @State static var images:[Result] = [
+        .init(id: 1, title: "some media", subtitle: "", image: "", type: .movie),
+        .init(id: 1, title: "some media", subtitle: "", image: "", type: .movie)
+    ]
+    
+    @State static var title = "This is a sample title"
+    
     static var previews: some View {
         MediaDetailsRowMore(images: images, title: title)
     }

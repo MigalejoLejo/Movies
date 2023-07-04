@@ -19,7 +19,6 @@ final class ApiService {
         params["api_key"] = api_key
         
         AF.request(base_url+endpoint, method: .get, parameters: params).responseDecodable(of:T.self, queue: .main){ result in
-            
             if let error = result.error {
                 print("error calling api get")
                 print(error.localizedDescription)
@@ -36,15 +35,22 @@ final class ApiService {
         }
     }
     
-    static func post <T:Codable, Body:Encodable>(endpoint:String, body: Body? , callback: @escaping (T)-> Void, errorCallback: ((ErrorResponse?) -> Void)? = nil) {
+    static func post <T:Codable, Body:Encodable>(endpoint:String, withSessionID:Bool, body: Body? , callback: @escaping (T)-> Void, errorCallback: ((ErrorResponse?) -> Void)? = nil) {
         let headers: HTTPHeaders = [
           "content-type": "application/json"
         ]
         
-        AF.request("\(base_url)\(endpoint)?api_key=\(api_key)", method: .post, parameters: body, encoder: JSONParameterEncoder.default, headers: headers).validate().responseDecodable(of:T.self, queue: .main){
+        let path:String = withSessionID
+            ? "\(base_url)\(endpoint)?api_key=\(api_key)&session_id=\(UserService.sharedInstance.sessionID ?? "")"
+            : "\(base_url)\(endpoint)?api_key=\(api_key)"
+        
+//        print(path)
+        
+        AF.request(path, method: .post, parameters: body, encoder: JSONParameterEncoder.default, headers: headers).validate().responseDecodable(of:T.self, queue: .main){
             result in
             if let error = result.error {
                 print("at post: " + error.localizedDescription)
+                print(error)
                 if let data = result.data, let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
                     errorCallback?(errorResponse)
                     return

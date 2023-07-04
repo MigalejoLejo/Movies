@@ -9,59 +9,51 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var model: HomeViewModel
-    @State var showFullToolbar = true
-    @Binding var isLoading: Bool
+    @ObservedObject var model: HomeViewModel
+    var isLoading: Bool
     
+    @State private var isActive : Bool = false
+    @State private var showFullToolbar = true
+
     
     
     var body: some View {
         GeometryReader { proxy in
-            NavigationStack{
-                
-                ZStack{
-                    
-                    ScrollView{
-                        ForEach(model.rows) { row in
-                            ImageCardRow(title: row.title, imageCards: row.list.results, endpoint: row.endpoint , type: .movie)
-                        }
+            NavigationView{
+                ScrollView{
+                    ForEach(model.rows) { row in
+                        ImageCardRow(title: row.title, imageCards: row.list.results, endpoint: row.endpoint , type: .movie)
+                            .padding(.top)
+
                     }
-                 
-                    .navigationTitle("Home")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .edgesIgnoringSafeArea(.bottom)
-                    .scrollIndicators(.hidden)
-                    .toolbar{
-                            ToolbarItem(placement:.navigationBarLeading){
-                                Button(isLoading ? "" : "Logout"){
-                                        model.logout()
-                                        model.rows = []
-                                    }
-                                
-                            }
-                            ToolbarItem(placement: .navigationBarTrailing){
-                                NavigationLink(destination: Search()){
-                                    Image(systemName: isLoading ? "" : "magnifyingglass")
-                                }
-                            
-                        }
-                    }
-                    
                 }
-                
-                
-                
-               
+                .navigationTitle("SuperMOVIE")
+                .scrollIndicators(.hidden)
+                .toolbar{
+                        ToolbarItem(placement:.navigationBarLeading){
+                            Button(!isLoading ? "" : "logout".localizedLanguage()){
+                                    model.logout()
+                                    model.rows = []
+                                }
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing){
+                            NavigationLink(destination: Search()){
+                                if isLoading {Image(systemName:"magnifyingglass") }
+                            }
+                    }
+                }
             }
+           
         }
+        
     }
 }
 
 struct MainNav_Previews: PreviewProvider {
-    @ObservedObject static var testModel = HomeViewModel()
-    @State static var isLoading:Bool = true
+    @StateObject static var testModel = HomeViewModel()
+    static var isLoading:Bool = true
 
     static var previews: some View {
-        HomeView(model: testModel, isLoading: $isLoading)
+        HomeView(model: testModel, isLoading: isLoading)
     }
 }

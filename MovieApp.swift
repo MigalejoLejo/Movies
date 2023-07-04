@@ -10,10 +10,14 @@ import SwiftUI
 @main
 struct MovieApp: App {
     
-    
+    @StateObject var model:ContentViewModel = ContentViewModel()
+    @AppStorage("isDarkMode") private var isDarkMode = false
+
     var body: some Scene {
-        WindowGroup {
+        WindowGroup { 
             ContentView()
+                .environmentObject(model)
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

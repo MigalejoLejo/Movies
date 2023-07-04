@@ -4,8 +4,8 @@ import Lottie
 
 struct LottieView: UIViewRepresentable {
     
-    var name: String
-    var loopMode: LottieLoopMode = .loop
+    private var name: String
+    private var loopMode: LottieLoopMode = .loop
     
 
     init(name: String, loopMode: LottieLoopMode = .loop) {

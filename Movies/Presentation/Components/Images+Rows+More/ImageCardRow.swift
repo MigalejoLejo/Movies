@@ -21,7 +21,7 @@ struct ImageCardRow: View {
                 Text(title)
                     .font(.title2)
                     .bold()
-                    .padding(.horizontal, 5)
+                    .padding(.horizontal)
                 Spacer()
                 NavigationLink(destination: ImageCardRowMore(title: title, path: endpoint)){
                    NavigationLable()

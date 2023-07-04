@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  Movies
+
+  Created by Miguel Alejandro Correa Avila on 30/6/23.
+  
+*/
+
+// ENGLISH 🇬🇧🇬🇧🇬🇧
+"activate" = "Activate";
+"airing_today" = "Airing Today";
+"birthdate" = "Birthdate";
+"born_in" = "Born in";
+"cancel" = "Cancel";
+"credits" = "Credits";
+"episodes" = "Episodes";
+"date_of_death" = "Date of death";
+"dark_mode" = "Dark Mode";
+"died_at" = "Died at";
+"favorites" = "Favorites";
+"home" = "Home";
+"language" = "Language";
+"lang_code" =  "en-US";
+"login" = "Log in";
+"logout" = "Logout";
+"more" = "more";
+"movie" = "Movie";
+"movies" = "Movies";
+"movies_and_tv" = "Movies and TV";
+"no_birth_or_death_information" = "No birth or death information";
+"of" = "of";
+"overview" = "Overview";
+"pages" = "pages";
+"password" = "Password";
+"person" = "Person";
+"popular_movies" = "Popular Movies";
+"popular_people" = "popular People";
+"popular_tv_series" = "Popular TV-Series";
+"recommendations" = "Recommendations";
+"seasons" = "Seasons";
+"season" = "Season";
+"search" = "Search";
+"settings" = "Settings";
+"similar" = "Similar";
+"top_bill_cast" = "Top Bill Cast";
+"top_rated_movies" = "Top Rated Movies";
+"top_rated_tv" = "Top Rated TV";
+"trailers" = "Trailers";
+"trending_now" = "Trending now";
+"tv" = "TV";
+"username" = "Username";
+"upcoming" = "Upcoming Movies";
+"years_old" = "years old";
+
+

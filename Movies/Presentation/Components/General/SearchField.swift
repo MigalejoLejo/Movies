@@ -9,16 +9,16 @@ import SwiftUI
 
 struct SearchField: View {
 
-    var title:String = "Search"
+    var title:String = String(localized: "search")
 //    @StateObject var model:SearchViewModel
     
     @Binding var searchItem:String
     @Binding var selectedContent: ResultType
     
-    @State var input:String = ""
-    @State var showCancel:Bool = false
+    @State private var input:String = ""
+    @State private var showCancel:Bool = false
     
-    @FocusState var isFocused:Bool
+    @FocusState private var isFocused:Bool
     
     
     var body: some View {
@@ -54,7 +54,7 @@ struct SearchField: View {
                 
                 
                 if showCancel {
-                    Button("Cancel"){
+                    Button( String(localized: "cancel")){
                         withAnimation{
                             showCancel = false
                             isFocused = false
@@ -68,10 +68,10 @@ struct SearchField: View {
             }
             
             if !input.isEmpty {
-                Picker("Search", selection: $selectedContent) {
-                    Text("Movie").tag(ResultType.movie)
-                    Text("TV").tag(ResultType.tv)
-                    Text("Person").tag(ResultType.person)
+                Picker( String(localized: "search"), selection: $selectedContent) {
+                    Text( String(localized: "movie")).tag(ResultType.movie)
+                    Text( String(localized: "tv")).tag(ResultType.tv)
+                    Text( String(localized: "person")).tag(ResultType.person)
                    }
                 .pickerStyle(.segmented)
                 .onChange(of: selectedContent, perform: { newValue in

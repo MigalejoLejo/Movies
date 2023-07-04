@@ -9,10 +9,14 @@ import SwiftUI
 import Kingfisher
 struct MediaDetailsView: View {
     
+    @EnvironmentObject var contentViewModel:ContentViewModel
     @ObservedObject var model: MediaDetailsViewModel
-    @State var isExpanded:Bool = false
-    @State var isPresented = false
-
+    
+    @State private var isExpanded:Bool = false
+    @State private var isPresented = false
+    @State private var updateView = false
+    
+    
     
     init(id: Int, type: ResultType){
         model = MediaDetailsViewModel(id: id, type: type)
@@ -32,44 +36,66 @@ struct MediaDetailsView: View {
                             overview(details: details)
                         }
                         
-                        PosterRow(results: details.credits.castResults , title: "Top Bill Casts", type: .cast)
+                        PosterRow(results: details.credits.castResults , title: "top_bill_cast".localizedLanguage(), type: .cast)
                         
                         trailerRow(videos: details.videos)
- 
-                        PosterRow(results: details.recommendations?.results, title: "Recommendations", type: .movie)
                         
-                        PosterRow(results: details.similar?.results, title: "Similar", type: .movie)
+                        PosterRow(results: details.recommendations?.results, title: "recommendations".localizedLanguage(), type: .movie)
+                        
+                        PosterRow(results: details.similar?.results, title: "Similar".localizedLanguage(), type: .movie)
                         
                         seasonRow(seasons: details.seasons?.reversed(), proxy: proxy)
                         
+                    }
+                    .onDisappear{
+                        if updateView {
+                            UserService.sharedInstance.updateFavorites.toggle()
+                            updateView = false
+                        }
                     }
                 }
                 .scrollIndicators(.hidden)
             }
             .navigationTitle(details.title)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{
+                        contentViewModel.navToHome()
+                    } label: {
+                        Image(systemName: "house")
+                    }
+                }
+            }
+            .onChange(of:model.isFavorite) { value in
+                updateView.toggle()
+            }
             
             
         } else {
-            ProgressView()
+            LottieView(name: "loading")
         }
+        
     }
 }
 
+
+
 extension MediaDetailsView{
+    
     @ViewBuilder
     func backDrop(name:String, width: CGFloat) -> some View {
         let path = "https://image.tmdb.org/t/p/w500/\(name)"
         BackdropImg(url: path, width: width)
     }
-   
+    
     
     @ViewBuilder
     func poster(details: DetailsWrapper, proxy: GeometryProxy, isPresented: Binding<Bool>) -> some View {
         let path:String = "https://image.tmdb.org/t/p/w500/\(details.poster ?? "")"
         let width:CGFloat = 110
         let height:CGFloat = 180
-    
+        
         HStack{
             Img(url: path, width: width, height: height)
                 .shadow(radius: 2)
@@ -83,13 +109,23 @@ extension MediaDetailsView{
                 .onTapGesture {
                     isPresented.wrappedValue.toggle()
                 }
-       
+            
             VStack(alignment: .leading){
-               
-                Text(details.title)
-                    .font(.title2)
-                    .bold()
-                    .padding(.vertical,2)
+                HStack (alignment: .top){
+                    Text(details.title)
+                        .font(.title2)
+                        .bold()
+                        .padding(.vertical,2)
+                    Spacer()
+                    FavoriteButton(
+                        isFavorite: model.isFavorite,
+                        removeFavorite: {
+                            model.remove()
+                        }, addFavorite: {
+                            model.add()
+                        })
+                    
+                }
                 Text(details.date)
                     .bold()
                     .padding(.vertical,1)
@@ -114,7 +150,7 @@ extension MediaDetailsView{
                     .padding(.bottom, 3)
                 Spacer()
             }
-           
+            
         } else {
             Text("")
         }
@@ -125,13 +161,13 @@ extension MediaDetailsView{
     func overview(details: DetailsWrapper) -> some View {
         VStack (alignment: .leading){
             if !details.overview.isEmpty {
-                Text("Overview")
+                Text("overview".localizedLanguage())
                     .font(.title2)
                     .bold()
-                    .padding(.horizontal, 5)
+                    .padding(.horizontal)
                     .padding(.vertical, 10)
-
-
+                
+                
                 Text(details.overview)
                     .lineLimit(isExpanded ? .max : 8)
                     .onTapGesture {
@@ -139,7 +175,6 @@ extension MediaDetailsView{
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 10)
-
             }
         }
     }
@@ -147,14 +182,12 @@ extension MediaDetailsView{
     
     @ViewBuilder
     func trailerRow(videos: Videos?) -> some View {
-
         if videos?.results.count ?? 0 > 0 {
             VStack(alignment: .leading, spacing: .zero){
-                
-                Text("Trailers")
+                Text("trailers".localizedLanguage())
                     .font(.title2)
                     .bold()
-                    .padding(.horizontal, 5)
+                    .padding(.horizontal)
                     .padding(.vertical, 10)
                 
                 ScrollView (.horizontal){
@@ -163,24 +196,20 @@ extension MediaDetailsView{
                             WebView(url: "https://www.youtube.com/embed/\(video.key ?? "")")
                                 .frame(width: 320, height: 200)
                                 .cornerRadius(10)
-                            
                         }
-                    }
-                    .padding(.horizontal)
+                    }.padding(.horizontal)
                 }
-                
-            }
-            .padding(.bottom, 10)
-        }     
+            }.padding(.bottom, 10)
+        }
     }
+    
     
     @ViewBuilder
     func seasonRow(seasons: [Season]?, proxy:GeometryProxy) -> some View {
-
         if let seasons = seasons, seasons.count > 0 {
             VStack (alignment: .leading, spacing: 10){
                 Group{
-                    Text("Seasons")
+                    Text("Seasons".localizedLanguage())
                         .font(.title2)
                         .bold()
                     if let season = seasons.first {
@@ -198,38 +227,29 @@ extension MediaDetailsView{
                             }
                         }
                         .padding(.horizontal)
-
-                    
                     }
                     .frame(height: 180)
                     .padding(.top, 3)
-
                 }
-                
             }
         }
-        
     }
     
     @ViewBuilder
     func seasonCard(season: Season, width: CGFloat? = nil, height: CGFloat) -> some View {
         let baseUrl = "https://image.tmdb.org/t/p/w500/"
-
         GeometryReader{ proxy in
-            
             Img(
                 url: "\(baseUrl)\(season.posterPath ?? "")",
                 width: proxy.frame(in: .local).width,
                 height: proxy.frame(in: .local).height,
                 mode: .fill,
                 alignment: .top
-
+                
             )
-            
-            
+          
             .overlay (
                 ZStack (alignment: .bottomLeading){
-                    
                     LinearGradient(colors: [.clear, .black.opacity(0.5), .black], startPoint: .topLeading, endPoint: .bottomTrailing)
                     
                     VStack (alignment: .leading){
@@ -237,32 +257,34 @@ extension MediaDetailsView{
                             .font(.title2)
                             .bold()
                         HStack{
-                            Text((season.episodeCount?.description ?? "") + " Episodes")
+                            Text((season.episodeCount?.description ?? "") + " \("episodes".localizedLanguage())")
                             Text(" | ")
                             Text(MyDateTools.format(this: season.airDate ?? ""))
-                        }
-                        .bold()
-                       
+                        }.bold()
                     }
                     .padding()
                     .foregroundColor(.white)
                 }
-            )
-            .cornerRadius(10)
-
-        }
-        .frame(width:width, height:height)
-       
-        
-        
+            ).cornerRadius(10)
+        } .frame(width:width, height:height)
     }
     
-
+//    
+//    func addToFavorites(){
+//        updateView = true
+//    }
+//    
+//    func removeFromFavorites() {
+//        updateView = false
+//    }
+    
+    
 }
 
 struct MediaDetailsView_Previews: PreviewProvider {
     
     static var previews: some View {
         MediaDetailsView(id: 13, type: .movie)
+            .environmentObject(ContentViewModel())
     }
 }

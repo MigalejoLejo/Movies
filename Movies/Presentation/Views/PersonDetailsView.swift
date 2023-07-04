@@ -9,11 +9,13 @@ import SwiftUI
 import Kingfisher
 
 struct PersonDetailsView: View {
-    
-    
+    @EnvironmentObject var contentViewModel:ContentViewModel
     @ObservedObject var model = PersonDetailsViewModel()
-    @State var isExpanded: Bool = false
-    @State var isPresented: Bool = false
+    
+    @State var images: [Profile] = []
+    
+    @State private var isExpanded: Bool = false
+    @State private var isPresented: Bool = false
     
     init(id:Int){
         model.loadDetails(id:id)
@@ -24,8 +26,21 @@ struct PersonDetailsView: View {
             ScrollView {
                 Header(proxy: proxy, path: model.person?.profilePath ?? "")
                 Profile(person: model.person, proxy: proxy)
-                PersonImagesRow(images: model.person?.images?.profiles ?? [])
-                PosterRow(results: model.person?.combinedCredits?.cast, title: "Movies and TV")
+                PersonImagesRow(images: $images)
+                PosterRow(results: model.person?.combinedCredits?.cast, title: "movies_and_tv".localizedLanguage())
+            }
+            .onReceive(model.person.publisher, perform: { person in
+                images = person.images?.profiles ?? []
+            })
+          
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{
+                        contentViewModel.navToHome()
+                    } label: {
+                        Image(systemName: "house")
+                    }
+                }
             }
         }
     }
@@ -107,5 +122,7 @@ extension PersonDetailsView{
 struct PersonDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         PersonDetailsView(id: 1000)
+            .environmentObject(ContentViewModel())
+        
     }
 }

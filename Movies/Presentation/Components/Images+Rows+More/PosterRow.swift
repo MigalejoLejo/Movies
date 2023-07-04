@@ -10,7 +10,7 @@ import SwiftUI
 struct PosterRow: View {
     
     var results: [Result]?
-    var title: String
+    let title: String
     var type: ResultType = .movie
     
     var body: some View {
@@ -21,11 +21,11 @@ struct PosterRow: View {
                     Text(title)
                         .font(.title2)
                         .bold()
-                        .padding(.horizontal,5)
+                        .padding(.horizontal)
                     Spacer()
                     NavigationLink(destination: MediaDetailsRowMore(images: results, title: title)){
                         NavigationLable()
-                            .padding(.horizontal, 5)
+                            .padding(.horizontal)
                     }
                 }
                 

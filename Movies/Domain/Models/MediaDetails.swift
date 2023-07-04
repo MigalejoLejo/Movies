@@ -13,6 +13,8 @@ protocol MediaDetails: AnyCodable {
     
 }
 
+
+// MARK: - DetailsWrapper
 struct DetailsWrapper: Codable{
     let id: Int
     let title: String
@@ -28,6 +30,7 @@ struct DetailsWrapper: Codable{
     var credits: Credits
     var seasons: [Season]?
     var videos: Videos
+    var accountState: MediaState
 }
 
 
@@ -58,7 +61,7 @@ struct MovieDetails: MediaDetails {
     let budget: Int?
     let genres: [Genre]?
     let homepage: String?
-    let id: Int
+    let id: Int?
     let imdbID: String?
     let originalLanguage: String?
     let originalTitle: String?
@@ -70,17 +73,18 @@ struct MovieDetails: MediaDetails {
     let releaseDate: String?
     let revenue: Int?
     let runtime: Int?
-    let spokenLanguages: [SpokenLanguage]
+    let spokenLanguages: [SpokenLanguage]?
     let status: String?
     @Defaultable var tagline: String
-    let title: String
+    let title: String?
     let video: Bool?
     let voteAverage: Double?
     let voteCount: Int?
     let similar: ResultList?
     let recommendations: ResultList?
-    let credits: Credits
-    var videos: Videos
+    @Defaultable var credits: Credits
+    var videos: Videos?
+    @Defaultable var accountStates: MediaState
 
     enum CodingKeys: String, CodingKey {
         case adult
@@ -101,12 +105,13 @@ struct MovieDetails: MediaDetails {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
         case similar, recommendations, credits, videos
+        case accountStates = "account_states"
     }
     
     var details: DetailsWrapper {
         .init(
-            id: id,
-            title: title,
+            id: id ?? 0,
+            title: title ?? "",
             genres: genres ?? [],
             backdrop: backdropPath,
             poster: posterPath,
@@ -118,7 +123,8 @@ struct MovieDetails: MediaDetails {
             similar: similar,
             credits: credits,
             seasons: nil,
-            videos: videos
+            videos: videos ?? Videos(results: []),
+            accountState: accountStates
         )
     }
 }
@@ -148,14 +154,15 @@ struct TVDetails: MediaDetails {
     let productionCompanies: [Network]?
     let productionCountries: [ProductionCountry]?
     let seasons: [Season]?
-    let spokenLanguages: [SpokenLanguage]
+    let spokenLanguages: [SpokenLanguage]?
     let status, tagline, type: String?
     let voteAverage: Double?
     let voteCount: Int?
     let similar, recommendations: ResultList?
-    let credits: Credits
-    var videos: Videos
-    
+    @Defaultable var credits: Credits
+    var videos: Videos?
+    @Defaultable var accountStates: MediaState
+
 
     enum CodingKeys: String, CodingKey {
         case adult
@@ -186,11 +193,14 @@ struct TVDetails: MediaDetails {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
         case similar, recommendations, credits, videos
+        case accountStates = "account_states"
+
 
     }
     
     var details: DetailsWrapper {
-        .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: MyDateTools.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos: videos)
+        .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: MyDateTools.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos:  videos ?? Videos(results: []), accountState: accountStates
+)
     }
    
 }
@@ -199,7 +209,7 @@ struct TVDetails: MediaDetails {
 struct PeopleDetails: Codable {
     let adult: Bool?
     let gender: Int
-    let id: Int
+    let id: Int?
     let knownForDepartment: String?
     let name: String?
     let birthday:String?
@@ -240,7 +250,7 @@ struct PeopleDetails: Codable {
     
     var result: Result {
             .init(
-                id: id,
+                id: id ?? 0,
                 title: name ?? "",
                 subtitle:"✩ " + (popularity?.description ?? ""),
                 image: profilePath ?? "",
@@ -249,6 +259,10 @@ struct PeopleDetails: Codable {
 }
 
 
+// >>>>>>>>>>>>>>>>>  SUB MODELS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// MARK: - BelongsToCollection
 struct BelongsToCollection: AnyCodable {
     var id: Int?
     var name: String?
@@ -256,85 +270,18 @@ struct BelongsToCollection: AnyCodable {
     var backdropPatch:String?
 }
 
-// MARK: - Credits
-struct Credits: Codable {
-    let cast, crew: [PeopleDetails]
-    var castResults: [Result] {cast.sorted (by: { $0.order < $1.order })[0..<min(15, cast.count)].map {$0.result}
-    }
+
+// MARK: - CombinedCredits
+struct CombinedCredits: Codable {
+    @ArrayAnyable<Options> var _cast: [Any]
     
-}
-
-
-
-// MARK: - Genre
-struct Genre: Codable {
-    let id: Int?
-    let name: String?
-}
-
-
-// MARK: - ProductionCompany
-struct ProductionCompany: Codable {
-    let id: Int?
-    let logoPath: String?
-    let name: String?
-    let originCountry: String?
-
     enum CodingKeys: String, CodingKey {
-        case id
-        case logoPath = "logo_path"
-        case name
-        case originCountry = "origin_country"
+        case _cast = "cast"
     }
+        
+    var cast: [Result] {_cast.compactMap {($0 as? Resultable)?.result }}
 }
 
-
-// MARK: - ProductionCountry
-struct ProductionCountry: Codable {
-    let iso3166_1: String?
-    let name: String?
-
-    enum CodingKeys: String, CodingKey {
-        case iso3166_1 = "iso_3166_1"
-        case name
-    }
-}
-
-// MARK: - Recommendations
-struct Recommendations: Codable {
-    let page: Int
-    let results: [MovieResult]
-    let totalPages, totalResults: Int
-
-    enum CodingKeys: String, CodingKey {
-        case page, results
-        case totalPages = "total_pages"
-        case totalResults = "total_results"
-    }
-    
-    
-}
-
-
-
-// MARK: - SpokenLanguage
-struct SpokenLanguage: Codable {
-    let englishName: String?
-    let iso639_1: String?
-    let name: String?
-
-    enum CodingKeys: String, CodingKey {
-        case englishName = "english_name"
-        case iso639_1 = "iso_639_1"
-        case name
-    }
-}
-
-// MARK: - Videos
-struct Videos: Codable {
-    let results: [VideosResult]
-
-}
 
 // MARK: - CreatedBy
 struct CreatedBy: Codable {
@@ -348,6 +295,19 @@ struct CreatedBy: Codable {
         case creditID = "credit_id"
         case name, gender
         case profilePath = "profile_path"
+    }
+}
+
+
+// MARK: - Credits
+struct Credits: Codable, DefaultCodable {
+    init() {
+        cast = []
+        crew = []
+    }
+    
+    let cast, crew: [PeopleDetails]
+    var castResults: [Result] {cast.sorted (by: { $0.order < $1.order })[0..<min(15, cast.count)].map {$0.result}
     }
 }
 
@@ -378,6 +338,14 @@ struct Episode: Codable {
     }
 }
 
+
+// MARK: - Genre
+struct Genre: Codable {
+    let id: Int?
+    let name: String?
+}
+
+
 // MARK: - Network
 struct Network: Codable {
     let id: Int?
@@ -392,16 +360,80 @@ struct Network: Codable {
     }
 }
 
-// MARK: - VideosResult
-struct VideosResult: Codable {
-    let name, key: String?
-    let site: String?
-    let id: String?
+
+// MARK: - State
+struct MediaState: Codable, DefaultCodable {
+    init(){
+        id = 0
+        favorite = false
+        watchlist = false
+    }
+    
+   let id: Int?
+   var favorite: Bool?
+   var watchlist: Bool?
+}
+
+
+// MARK: - PersonImages
+struct PersonImages: Codable {
+    let id: Int?
+    let profiles: [Profile]?
+}
+
+
+// MARK: - ProductionCompany
+struct ProductionCompany: Codable {
+    let id: Int?
+    let logoPath: String?
+    let name: String?
+    let originCountry: String?
 
     enum CodingKeys: String, CodingKey {
-        case name, key, site, id
+        case id
+        case logoPath = "logo_path"
+        case name
+        case originCountry = "origin_country"
     }
 }
+
+
+// MARK: - ProductionCountry
+struct ProductionCountry: Codable {
+    let iso3166_1: String?
+    let name: String?
+
+    enum CodingKeys: String, CodingKey {
+        case iso3166_1 = "iso_3166_1"
+        case name
+    }
+}
+
+
+// MARK: - Profile
+struct Profile: Codable {
+    let filePath: String?
+
+    enum CodingKeys: String, CodingKey {
+        case filePath = "file_path"
+    }
+}
+
+
+
+// MARK: - Recommendations
+struct Recommendations: Codable {
+    let page: Int
+    let results: [MovieResult]
+    let totalPages, totalResults: Int
+
+    enum CodingKeys: String, CodingKey {
+        case page, results
+        case totalPages = "total_pages"
+        case totalResults = "total_results"
+    }
+}
+
 
 // MARK: - Season
 struct Season: Codable {
@@ -420,29 +452,38 @@ struct Season: Codable {
 }
 
 
-
-// MARK: - PersonImages
-struct PersonImages: Codable {
-    let id: Int?
-    let profiles: [Profile]?
-}
-
-// MARK: - Profile
-struct Profile: Codable {
-    let filePath: String?
+// MARK: - SpokenLanguage
+struct SpokenLanguage: Codable {
+    let englishName: String?
+    let iso639_1: String?
+    let name: String?
 
     enum CodingKeys: String, CodingKey {
-        case filePath = "file_path"
+        case englishName = "english_name"
+        case iso639_1 = "iso_639_1"
+        case name
     }
 }
 
-struct CombinedCredits: Codable {
-    @ArrayAnyable<Options> var _cast: [Any]
-    
-    enum CodingKeys: String, CodingKey {
-        case _cast = "cast"
-    }
-        
-    var cast: [Result] {_cast.compactMap {($0 as? Resultable)?.result }}
+
+// MARK: - Videos
+struct Videos: Codable {
+    let results: [VideosResult]
 }
- 
+
+
+// MARK: - VideosResult
+struct VideosResult: Codable {
+    let name, key: String?
+    let site: String?
+    let id: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name, key, site, id
+    }
+}
+
+
+
+
+

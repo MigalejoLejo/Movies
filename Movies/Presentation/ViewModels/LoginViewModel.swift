@@ -29,11 +29,5 @@ class LoginViewModel: ObservableObject {
     
     func validate() -> Bool{
         return !username.isEmpty && !password.isEmpty
-        
-    }
-    
-    
-  
-    
-    
+    } 
 }

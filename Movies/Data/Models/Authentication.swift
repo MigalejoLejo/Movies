@@ -60,3 +60,22 @@ struct Session:Codable {
 struct LogoutResponse: Codable {
     var success: Bool
 }
+
+struct ErrorResponse: Codable {
+    let code: Int
+    let message: String
+    
+    enum CodingKeys:String, CodingKey{
+        case code = "status_code", message = "status_message"
+    }
+}
+
+struct Response: Codable {
+    let success: Bool
+    let code: Int
+    let message: String
+    
+    enum CodingKeys:String, CodingKey{
+        case success = "success", code = "status_code", message = "status_message"
+    }
+}

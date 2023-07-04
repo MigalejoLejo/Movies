@@ -30,7 +30,9 @@ struct BackdropImg: View {
             .cacheOriginalImage()
             .resizable()
             .aspectRatio(contentMode: mode)
-            .frame(maxWidth: width)
+            .frame(maxWidth: width, maxHeight: 200)
+            .clipped()
+            .scaledToFill()
             .shadow(radius: shadow)
     }
 }

@@ -36,5 +36,398 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C759608A-9BEE-4BD8-B149-18C00D088A10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/Data/UserService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "loadAccount()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C759608A-9BEE-4BD8-B149-18C00D088A10 - d37395dddbf76694"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SuperMOVIE.UserService.loadAccount() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Data/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "C759608A-9BEE-4BD8-B149-18C00D088A10 - 552593ef81cbcc0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SuperMOVIE.Account) -&gt; () in SuperMOVIE.UserService.loadAccount() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Data/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "C759608A-9BEE-4BD8-B149-18C00D088A10 - d37395dddbf766d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SuperMOVIE.UserService.loadAccount() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Data/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "C759608A-9BEE-4BD8-B149-18C00D088A10 - 552593ef81cbccc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SuperMOVIE.Account) -&gt; () in SuperMOVIE.UserService.loadAccount() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Data/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86FE9894-A223-436F-A294-5CA07E0EEC83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/Presentation/ViewModels/MediaDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "loadDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "86FE9894-A223-436F-A294-5CA07E0EEC83 - 45eaec173ffc9c89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Movies.MovieDetails) -&gt; () in Movies.MediaDetailsViewModel.loadDetails() -&gt; ()"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/MediaDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+               <Location
+                  uuid = "86FE9894-A223-436F-A294-5CA07E0EEC83 - 45eaec173ffc9c89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Movies.MovieDetails) -&gt; () in Movies.MediaDetailsViewModel.loadDetails() -&gt; ()"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/MediaDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "86FE9894-A223-436F-A294-5CA07E0EEC83 - 2f9691e2bf667ba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SuperMOVIE.MovieDetails) -&gt; () in SuperMOVIE.MediaDetailsViewModel.loadDetails() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/MediaDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "86FE9894-A223-436F-A294-5CA07E0EEC83 - 2f9691e2bf667b65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SuperMOVIE.MovieDetails) -&gt; () in SuperMOVIE.MediaDetailsViewModel.loadDetails() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/MediaDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7298AFF1-0DB6-4050-982F-B443A232B0C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/Data/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "post(endpoint:withSessionID:body:callback:errorCallback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7298AFF1-0DB6-4050-982F-B443A232B0C7 - 1d61ecc566d2cd58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in static Movies.ApiService.post&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable, &#x3c4;_0_1: Swift.Encodable&gt;(endpoint: Swift.String, withSessionID: Swift.Bool, body: Swift.Optional&lt;&#x3c4;_0_1&gt;, callback: (&#x3c4;_0_0) -&gt; (), errorCallback: Swift.Optional&lt;(Swift.Optional&lt;Movies.ErrorResponse&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Data/ApiService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "7298AFF1-0DB6-4050-982F-B443A232B0C7 - 946024a38340949a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in static SuperMOVIE.ApiService.post&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable, &#x3c4;_0_1: Swift.Encodable&gt;(endpoint: Swift.String, withSessionID: Swift.Bool, body: Swift.Optional&lt;&#x3c4;_0_1&gt;, callback: (&#x3c4;_0_0) -&gt; (), errorCallback: Swift.Optional&lt;(Swift.Optional&lt;SuperMOVIE.ErrorResponse&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Data/ApiService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "200AAB20-AB35-48C5-AEDB-66DB9F317029"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/Presentation/Views/PersonDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "200AAB20-AB35-48C5-AEDB-66DB9F317029 - 2ac9338a49481640"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Movies.PersonDetailsView.Header(proxy: SwiftUI.GeometryProxy, path: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Movies.PersonDetailsView.Profile(person: Swift.Optional&lt;Movies.PeopleDetails&gt;, proxy: SwiftUI.GeometryProxy) -&gt; some&gt;&gt;.0, Movies.PersonImagesRow, Movies.PosterRow)&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in Movies.PersonDetailsView.body.getter : some"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "780">
+               </Location>
+               <Location
+                  uuid = "200AAB20-AB35-48C5-AEDB-66DB9F317029 - 2ac9338a49481682"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Movies.PersonDetailsView.Header(proxy: SwiftUI.GeometryProxy, path: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Movies.PersonDetailsView.Profile(person: Swift.Optional&lt;Movies.PeopleDetails&gt;, proxy: SwiftUI.GeometryProxy) -&gt; some&gt;&gt;.0, Movies.PersonImagesRow, Movies.PosterRow)&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in Movies.PersonDetailsView.body.getter : some"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "780">
+               </Location>
+               <Location
+                  uuid = "200AAB20-AB35-48C5-AEDB-66DB9F317029 - fd1884c92722f828"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SuperMOVIE.PersonDetailsView.Header(proxy: SwiftUI.GeometryProxy, path: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SuperMOVIE.PersonDetailsView.Profile(person: Swift.Optional&lt;SuperMOVIE.PeopleDetails&gt;, proxy: SwiftUI.GeometryProxy) -&gt; some&gt;&gt;.0, SuperMOVIE.PersonImagesRow, SuperMOVIE.PosterRow)&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in SuperMOVIE.PersonDetailsView.body.getter : some"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "876">
+               </Location>
+               <Location
+                  uuid = "200AAB20-AB35-48C5-AEDB-66DB9F317029 - fd1884c92722f828"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SuperMOVIE.PersonDetailsView.Header(proxy: SwiftUI.GeometryProxy, path: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SuperMOVIE.PersonDetailsView.Profile(person: Swift.Optional&lt;SuperMOVIE.PeopleDetails&gt;, proxy: SwiftUI.GeometryProxy) -&gt; some&gt;&gt;.0, SuperMOVIE.PersonImagesRow, SuperMOVIE.PosterRow)&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in SuperMOVIE.PersonDetailsView.body.getter : some"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "780">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13AEE940-9FC5-4E1C-AE8F-53675DDDD2D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/Presentation/Views/PersonDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "13AEE940-9FC5-4E1C-AE8F-53675DDDD2D4 - 761aeb10cd4ec4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Movies.PersonDetailsView.init(id: Swift.Int) -&gt; Movies.PersonDetailsView"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "13AEE940-9FC5-4E1C-AE8F-53675DDDD2D4 - 761aeb10cd4ec8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Movies.PersonDetailsView.init(id: Swift.Int) -&gt; Movies.PersonDetailsView"
+                  moduleName = "Movies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "13AEE940-9FC5-4E1C-AE8F-53675DDDD2D4 - 9a3a1770eecda7ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SuperMOVIE.PersonDetailsView.init(id: Swift.Int) -&gt; SuperMOVIE.PersonDetailsView"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/PersonDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A1249FE-0309-4396-899F-5C400147A72A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/Presentation/ViewModels/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "reload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A1249FE-0309-4396-899F-5C400147A72A - d57b0320c60f480c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SuperMOVIE.HomeViewModel.reload() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "4A1249FE-0309-4396-899F-5C400147A72A - d57b0320c60f480c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SuperMOVIE.HomeViewModel.reload() -&gt; ()"
+                  moduleName = "SuperMOVIE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

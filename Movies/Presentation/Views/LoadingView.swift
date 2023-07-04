@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoadingView: View {
-    @State var width: CGFloat
-    @State var height: CGFloat
+    @State  var width: CGFloat
+    @State  var height: CGFloat
     
     var body: some View {
         

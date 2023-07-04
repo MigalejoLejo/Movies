@@ -37,6 +37,24 @@
       }
     },
     {
+      "identity" : "languagemanager-swiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Abedalkareem/LanguageManager-SwiftUI",
+      "state" : {
+        "revision" : "429ce35c2f82f05d69a6042f50ff622fc0422704",
+        "version" : "0.0.6"
+      }
+    },
+    {
+      "identity" : "lazy-view-swiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/joehinkle11/Lazy-View-SwiftUI",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0f838ed8eb0beb3faab35aae225f2545a1dd5338"
+      }
+    },
+    {
       "identity" : "lottie-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-ios",

@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationLable: View {
     var body: some View {
         HStack{
-            Text("more").foregroundColor(.blue)
+            Text("more".localizedLanguage()).foregroundColor(.blue)
             Image(systemName: "chevron.right").foregroundColor(.blue)
         }
     }

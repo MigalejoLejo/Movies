@@ -8,11 +8,3 @@
 import Foundation
 
 
-struct ErrorResponse: Codable {
-    let code: Int
-    let message: String
-    
-    enum CodingKeys:String, CodingKey{
-        case code = "status_code", message = "status_message"
-    }
-}

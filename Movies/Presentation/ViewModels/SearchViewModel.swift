@@ -23,7 +23,11 @@ class SearchViewModel: ObservableObject {
     
     
     func search(item: String, in category:String){
-        params = ["query": item]
+        params = [
+            "query": item,
+            "language":UserService.sharedInstance.appLanguage
+        ]
+        
         self.item = item
         self.category = category
         endpoint = "search/\(category)"
@@ -36,12 +40,20 @@ class SearchViewModel: ObservableObject {
         page = 1
     }
     
+   
+    
+    
     func getMoreResults(){
         if page < totalPages {
             page += 1
         }
         
-        params = ["query": item, "page": page]
+        params = [
+            "query": item,
+            "page": page,
+            "language":UserService.sharedInstance.appLanguage
+        ]
+        
         print("searching more")
 
         if page > 1 && page < totalPages {

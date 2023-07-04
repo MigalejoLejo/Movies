@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 class PersonDetailsViewModel: ObservableObject {
     var id: Int = 0
     var endpoint:String = ""
@@ -21,44 +20,45 @@ class PersonDetailsViewModel: ObservableObject {
     func loadDetails(id:Int){
         self.id = id
         endpoint = "person/\(id)"
-        params = ["append_to_response": "combined_credits,images"]
+        params = [
+            "append_to_response": "combined_credits,images",
+            "language":UserService.sharedInstance.appLanguage
+        ]
+        
+        
+        
 
         ApiService.get(endpoint: endpoint, parameters: params){ (person: PeopleDetails) in
             self.person = person
-
-           
+            print(self.person?.images?.profiles ?? [])
         }
     }
+    
     
     func getBirthAndDeathDetails () -> some View{
         var birhtAndDeathDetails = ""
         
         if let age = MyDateTools.calculateAge(from:person?.birthday ?? "") {
             if let deathDate = person?.deathday, !deathDate.isEmpty{
-                birhtAndDeathDetails = ("Died at \(age) years old \n")
+                birhtAndDeathDetails = "\("died_at".localizedLanguage()): \(age) \("years_old".localizedLanguage()) \n"
             } else {
-                birhtAndDeathDetails += ("\(age) years old \n")
+                birhtAndDeathDetails += ("\(age) \(String(localized: "years_old")) \n")
             }
-            birhtAndDeathDetails += ("Birthdate: \(MyDateTools.format(this: person?.birthday ?? "")) \n")
-               
+            birhtAndDeathDetails += ("\("birthdate".localizedLanguage()): \(MyDateTools.format(this: person?.birthday ?? "")) \n")
         }
         
         if let birthPlace = person?.placeOfBirth, !birthPlace.isEmpty {
-            birhtAndDeathDetails += ("Born in \(birthPlace) \n")
-               
+            birhtAndDeathDetails += ("\("born_in".localizedLanguage()) \(birthPlace) \n")
         }
         
         if let deathDate = person?.deathday, !deathDate.isEmpty{
-            birhtAndDeathDetails += ("Date of death: \(MyDateTools.format(this: deathDate)) \n")
-               
-            
+            birhtAndDeathDetails += ("\("date_of_death".localizedLanguage()): \(MyDateTools.format(this: deathDate)) \n")
         }
        
         if birhtAndDeathDetails.isEmpty {
-            return Text("No birth or death information.")
+            return Text("\("no_birth_or_death_information".localizedLanguage()).")
         } else {
             return Text(birhtAndDeathDetails)
         }
     }
-    
 }

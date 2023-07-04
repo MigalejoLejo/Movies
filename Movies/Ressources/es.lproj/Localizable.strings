@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  Movies
+
+  Created by Miguel Alejandro Correa Avila on 30/6/23.
+  
+*/
+
+// ESPAÑOL 🇪🇸🇪🇸🇪🇸
+
+"activate" = "Activar";
+"airing_today" = "Se emiten hoy";
+"birthdate" = "Fecha de nacimiento";
+"born_in" = "Nació en";
+"cancel" = "Cancelar";
+"credits" = "Créditos";
+"episodes" = "Episodios";
+"dark_mode" = "Modo Oscuro";
+"date_of_death" = "Fecha de fallecimiento";
+"died_at" = "Murio a los";
+"favorites" = "Favoritos";
+"home" = "Home";
+"language" = "Idioma";
+"lang_code" =  "es-ES";
+"login" = "Login";
+"logout" = "Cerrar sesión";
+"more" = "más";
+"movie" = "Película";
+"movies" = "Películas";
+"movies_and_tv" = "Películas y Series";
+"no_birth_or_death_information" = "No hay informacion disponible";
+"of" = "de";
+"overview" = "Vista general";
+"pages" = "páginas";
+"password" = "Contraseña";
+"person" = "Persona";
+"popular_movies" = "Películas populares";
+"popular_people" = "Gente popular";
+"popular_tv_series" = "Series populares";
+"recommendations" = "Recomendaciones";
+"seasons" = "Temporadas";
+"season" = "Temporada";
+"search" = "Buscar";
+"settings" = "Configuración";
+"similar" = "Similares";
+"top_bill_cast" = "Reparto principal";
+"top_rated_movies" = "Películas mejor valoradas";
+"top_rated_tv" = "Series mejor valoradas";
+"trailers" = "Trailers";
+"trending_now" = "Tendencia actual";
+"tv" = "TV";
+"username" = "Usuario";
+"upcoming" = "Proximamente";
+"years_old" = "años";
+
+
+

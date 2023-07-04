@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import LazyViewSwiftUI
 
 struct Search: View {
     
     @ObservedObject var model = SearchViewModel()
     
-    @State var searchItem = ""
-    @State var selectedContent: ResultType = .movie
+    @State private var searchItem = ""
+    @State private var selectedContent: ResultType = .movie
     
     let columns = [
         GridItem(.flexible()),
@@ -22,8 +23,9 @@ struct Search: View {
     
     
     var body: some View {
-        VStack{
+        LazyView (VStack{
             SearchField(searchItem: $searchItem, selectedContent: $selectedContent)
+                .padding(.top)
             
             ScrollView(.vertical){
                 LazyVGrid(columns: columns) {
@@ -34,7 +36,8 @@ struct Search: View {
                 }
             }
             
-            Text("\(model.page) of \(model.totalPages) pages")
+            Text("\(model.page) \("of".localizedLanguage()) \(model.totalPages) \("paginas".localizedLanguage()) ")
+                .padding()
             
         }
         .padding(.horizontal)
@@ -44,7 +47,7 @@ struct Search: View {
         }
         .onChange(of: selectedContent){ item in
             model.search(item: searchItem, in: item.rawValue)
-        }
+        })
     }
 }
 

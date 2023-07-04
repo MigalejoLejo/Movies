@@ -15,6 +15,13 @@ class UserService: ObservableObject {
     
     @Published var sessionID: String? = nil
     @Published var isLoggedIn: Bool = false
+    @Published var account: Account? = nil
+    @Published var accountID: String? = nil
+    @Published var updateFavorites: Bool = false
+    @Published var appLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+
+    
+    
     
     public var hasSessionID: Bool {
         guard let _ = try? storage.get("session_id") else {
@@ -22,16 +29,38 @@ class UserService: ObservableObject {
         }
         return true
     }
+    
+    public var hasAccountID: Bool {
+        guard let _ = try? storage.get("account_id") else {
+            return false
+        }
+        return true
+    }
   
     
     init() {
-        loadSessionID()
+        loadSession()
         isLoggedIn = hasSessionID
-
+        print(sessionID ?? "no session id")
+        print(accountID ?? "no account id")
     }
     
+    func loadAccount () {
+        let path  = "account?session_id=\(UserService.sharedInstance.sessionID ?? "")"
+        ApiService.get(endpoint: path){ (account:Account) in
+            do {
+                try self.storage.set(account.id.description, key: "account_id")
+//                successCallback?()
+            } catch (let error){
+                print("On creating new session: " + error.localizedDescription)
+            }
+            self.account = account
+            print(account.id)
+        }
+        
+    }
     
-    func loadSessionID (){
+    func loadSession (){
         if let storageSessionID = try? storage.get("session_id") {
             sessionID = storageSessionID
             isLoggedIn = hasSessionID
@@ -40,6 +69,13 @@ class UserService: ObservableObject {
             isLoggedIn = hasSessionID
 
         }
+        
+        if let storageAccountID = try? storage.get("account_id") {
+            accountID = storageAccountID
+        } else {
+            accountID = nil
+        }
+        
     }
     
     
@@ -47,7 +83,7 @@ class UserService: ObservableObject {
     func authenticate (username: String, password: String, errorCallback: ((ErrorResponse?)->Void)? = nil, successCallback: (()->Void)? = nil){
         newToken{ token in
             let credentials: UserCredentials = .init(username: username, password: password, requestToken: token.requestToken)
-            ApiService.post(endpoint: "authentication/token/validate_with_login", body: credentials, callback: { (responseToken:Token) in
+            ApiService.post(endpoint: "authentication/token/validate_with_login", withSessionID: false, body: credentials, callback: { (responseToken:Token) in
                 if token.success {
                     self.newSession(requestToken: responseToken.requestToken , errorCallback: errorCallback)
                 }
@@ -67,11 +103,12 @@ class UserService: ObservableObject {
     
     func newSession (requestToken:String, errorCallback: ((ErrorResponse?)->Void)?, successCallback: (()->Void)? = nil){
         let credentials: TokenCredential = .init(requestToken: requestToken)
-        ApiService.post(endpoint: "authentication/session/new", body: credentials, callback: { (session:Session) in
+        ApiService.post(endpoint: "authentication/session/new", withSessionID: false, body: credentials, callback: { (session:Session) in
             if session.success {
                 do {
                     try self.storage.set(session.sessionID, key: "session_id")
-                    self.loadSessionID()
+                    self.loadSession()
+                    self.loadAccount()
                     successCallback?()
                 } catch (let error){
                     print("On creating new session: " + error.localizedDescription)
@@ -83,17 +120,51 @@ class UserService: ObservableObject {
     
     
     func unauthenticate (){
-        loadSessionID()
+        loadSession()
         let credentials: SessionCredential = .init(sessionID:sessionID ?? "")
         ApiService.delete(endpoint: "authentication/session", body: credentials, callback: { (result:LogoutResponse) in
             if  result.success {
                 do {
                     try self.storage.remove("session_id")
-                    self.loadSessionID()
+                    self.loadSession()
                 } catch (let error){
                     print("On unauthentication: " + error.localizedDescription)
                 }
             }
         })
     }
+    
+    
+    func setLanguage (language: Language) {
+        print("changing language")
+        switch language {
+        case .de: appLanguage = "de"
+        case .en:  appLanguage  = "en"
+        case .es:  appLanguage = "es"
+        case .systemDefault:  appLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+        }
+        
+        print("language set to: ")
+        print(appLanguage)
+        
+    }
+    
+    func getLanguage () -> String {
+        
+        let systemLang = appLanguage
+
+        switch systemLang {
+            case "en": return "en-US"
+            case "es": return "es-ES"
+            case "de": return "de-DE"
+            default: return "en-US"
+        }
+       
+    }
+    
+   
+
+    
 }
+
+
