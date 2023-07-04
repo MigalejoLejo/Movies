@@ -30,7 +30,9 @@ struct BackdropImg: View {
             .cacheOriginalImage()
             .resizable()
             .aspectRatio(contentMode: mode)
-            .frame(maxWidth: width, maxHeight: 200)
+            .frame(
+                maxWidth: width,
+                maxHeight:  UIDevice.current.localizedModel == "iPhone" ? 200 : 500)
             .clipped()
             .scaledToFill()
             .shadow(radius: shadow)

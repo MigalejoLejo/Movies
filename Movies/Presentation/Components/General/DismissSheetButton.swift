@@ -21,6 +21,7 @@ struct DismissSheetButton: View {
                     .resizable()
                     .frame(width: 40, height: 40)
                     .foregroundColor(color)
+                    .shadow(color: .gray, radius: 3)
                     .onTapGesture {
                         isPresented.toggle()
                     }

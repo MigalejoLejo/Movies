@@ -41,8 +41,8 @@ class UserService: ObservableObject {
     init() {
         loadSession()
         isLoggedIn = hasSessionID
-        print(sessionID ?? "no session id")
-        print(accountID ?? "no account id")
+//        print(sessionID ?? "no session id")
+//        print(accountID ?? "no account id")
     }
     
     func loadAccount () {
@@ -136,35 +136,24 @@ class UserService: ObservableObject {
     
     
     func setLanguage (language: Language) {
-        print("changing language")
         switch language {
         case .de: appLanguage = "de"
         case .en:  appLanguage  = "en"
         case .es:  appLanguage = "es"
         case .systemDefault:  appLanguage = Locale.current.language.languageCode?.identifier ?? "en"
         }
-        
-        print("language set to: ")
-        print(appLanguage)
-        
     }
     
+    
     func getLanguage () -> String {
-        
         let systemLang = appLanguage
-
         switch systemLang {
             case "en": return "en-US"
             case "es": return "es-ES"
             case "de": return "de-DE"
             default: return "en-US"
         }
-       
     }
-    
-   
-
-    
 }
 
 

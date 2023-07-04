@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4900E36C2A52E560005E29D8 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E36B2A52E560005E29D8 /* CreditsView.swift */; };
+		4900E3712A542DAB005E29D8 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E3702A542DAB005E29D8 /* CreditsView.swift */; };
+		4900E3732A5440C1005E29D8 /* SheetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E3722A5440C1005E29D8 /* SheetImage.swift */; };
+		4900E3752A54428D005E29D8 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E3742A54428D005E29D8 /* ColorHelper.swift */; };
 		49080F982A376E94007F130F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49080F972A376E94007F130F /* HomeViewModel.swift */; };
 		49080FA02A37734C007F130F /* HomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49080F9F2A37734C007F130F /* HomeRow.swift */; };
 		49080FA22A377378007F130F /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49080FA12A377378007F130F /* Results.swift */; };
@@ -76,7 +78,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4900E36B2A52E560005E29D8 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreditsView.swift; path = Movies/Presentation/MainViews/SubViews/CreditsView.swift; sourceTree = SOURCE_ROOT; };
+		4900E3702A542DAB005E29D8 /* CreditsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		4900E3722A5440C1005E29D8 /* SheetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetImage.swift; sourceTree = "<group>"; };
+		4900E3742A54428D005E29D8 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		49080F972A376E94007F130F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		49080F9F2A37734C007F130F /* HomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRow.swift; sourceTree = "<group>"; };
 		49080FA12A377378007F130F /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -167,7 +171,7 @@
 				4926533F2A2F53C400C1B089 /* Search.swift */,
 				4974ABC22A3A15E30076A9EF /* MediaDetailsView.swift */,
 				49A4868C2A407A2200209D5B /* PersonDetailsView.swift */,
-				4900E36B2A52E560005E29D8 /* CreditsView.swift */,
+				4900E3702A542DAB005E29D8 /* CreditsView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -198,6 +202,7 @@
 				4926533A2A2F47E800C1B089 /* Warning.swift */,
 				49A486902A40B86900209D5B /* DateTools.swift */,
 				49848B372A4EFC9A00B777C5 /* LanguageTools.swift */,
+				4900E3742A54428D005E29D8 /* ColorHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				49AD7A192A42F4A300A75190 /* PosterRow.swift */,
 				49A486922A40C0E200209D5B /* PersonImagesRow.swift */,
 				49AD7A1B2A43014300A75190 /* ImagesTabNav.swift */,
+				4900E3722A5440C1005E29D8 /* SheetImage.swift */,
 			);
 			path = "Images+Rows+More";
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				492653392A2F460E00C1B089 /* WarningComponent.swift in Sources */,
 				49080FA42A3773E9007F130F /* Endpoints.swift in Sources */,
 				497FBD8F2A40645A008D3EF0 /* MediaDetailsRowMore.swift in Sources */,
+				4900E3732A5440C1005E29D8 /* SheetImage.swift in Sources */,
 				492653432A2F565000C1B089 /* SearchField.swift in Sources */,
 				49A486932A40C0E200209D5B /* PersonImagesRow.swift in Sources */,
 				4963648D2A2DC251009BCB9A /* ContentView.swift in Sources */,
@@ -518,7 +525,6 @@
 				4926533D2A2F506E00C1B089 /* HomeView.swift in Sources */,
 				4974ABC72A3A17ED0076A9EF /* MediaDetails.swift in Sources */,
 				495726E52A49B0F400D9BD42 /* Account.swift in Sources */,
-				4900E36C2A52E560005E29D8 /* CreditsView.swift in Sources */,
 				49AD7A1A2A42F4A300A75190 /* PosterRow.swift in Sources */,
 				49A486972A41A03600209D5B /* NavigationLable.swift in Sources */,
 				496364A22A2E32F0009BCB9A /* ImageCard.swift in Sources */,
@@ -527,6 +533,7 @@
 				49AD7A1F2A43120500A75190 /* Env.swift in Sources */,
 				49848B0E2A49CD4300B777C5 /* ContentViewModel.swift in Sources */,
 				49A486992A41A06300209D5B /* Card.swift in Sources */,
+				4900E3712A542DAB005E29D8 /* CreditsView.swift in Sources */,
 				497FBD842A3B20BB008D3EF0 /* ImageCardRowViewModel.swift in Sources */,
 				49848B142A4AD7C900B777C5 /* FavoritesViewModel.swift in Sources */,
 				49A486912A40B86900209D5B /* DateTools.swift in Sources */,
@@ -539,6 +546,7 @@
 				496364AA2A2E39D5009BCB9A /* Img.swift in Sources */,
 				49848B202A4D72C900B777C5 /* FavoriteButton.swift in Sources */,
 				4974ABBF2A3A135A0076A9EF /* View+Extensions.swift in Sources */,
+				4900E3752A54428D005E29D8 /* ColorHelper.swift in Sources */,
 				49848B122A4AD7B600B777C5 /* FavoritesView.swift in Sources */,
 				495726AA2A446AF200D9BD42 /* LottieView.swift in Sources */,
 				4927B1552A2F2A690088F83A /* Login.swift in Sources */,

@@ -19,7 +19,7 @@ struct HomeView: View {
     
     var body: some View {
         GeometryReader { proxy in
-            NavigationView{
+            NavigationStack{
                 ScrollView{
                     ForEach(model.rows) { row in
                         ImageCardRow(title: row.title, imageCards: row.list.results, endpoint: row.endpoint , type: .movie)

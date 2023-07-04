@@ -28,7 +28,7 @@ struct FavoritesView: View {
     
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ScrollViewReader{ reader in
                 ScrollView(.vertical){
                     Picker("search".localizedLanguage(), selection: $selectedContent) {

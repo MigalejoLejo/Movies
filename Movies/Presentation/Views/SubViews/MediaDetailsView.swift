@@ -101,10 +101,12 @@ extension MediaDetailsView{
                 .shadow(radius: 2)
                 .sheet(isPresented: $isPresented) {
                     ZStack{
-                        Img(url:"https://image.tmdb.org/t/p/original/\(details.poster ?? "")" , width: proxy.size.width, height: proxy.size.height)
+                        SheetImage(url: "https://image.tmdb.org/t/p/original/\(details.poster ?? "")")
                         DismissSheetButton(isPresented: $isPresented)
                             .padding()
                     }
+                    .background(.black)
+
                 }
                 .onTapGesture {
                     isPresented.wrappedValue.toggle()
@@ -259,7 +261,7 @@ extension MediaDetailsView{
                         HStack{
                             Text((season.episodeCount?.description ?? "") + " \("episodes".localizedLanguage())")
                             Text(" | ")
-                            Text(MyDateTools.format(this: season.airDate ?? ""))
+                            Text(DateTools.format(this: season.airDate ?? ""))
                         }.bold()
                     }
                     .padding()
