@@ -8,6 +8,20 @@
 import Foundation
 import CodableX
 
+
+struct Result: Identifiable, Hashable {
+    let uuid = UUID()
+    let id:Int
+    let title:String
+    let subtitle:String?
+    let image:String
+    let type:ResultType
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.uuid)
+    }
+}
+
 struct ResultList: Codable {
     var page: Int?
     var totalPages: Int?
@@ -68,7 +82,7 @@ struct MovieResult: Resultable {
             .init(
                 id: id,
                 title: title,
-                subtitle: MyDateTools.format(this: releaseDate ?? ""),
+                subtitle: DateTools.format(this: releaseDate ?? ""),
                 image: posterPath ?? "",
                 type: .movie)
         }
@@ -111,7 +125,7 @@ struct TVResult: Resultable {
             .init(
                 id: id,
                 title: name,
-                subtitle:  MyDateTools.format(this: firstAirDate ?? ""),
+                subtitle:  DateTools.format(this: firstAirDate ?? ""),
                 image: posterPath ?? "",
                 type: .tv
         )
@@ -173,3 +187,6 @@ struct Options: OptionConfigurable {
 }
 
 
+enum ResultType: String {
+    case tv, movie, person, cast, credit
+}

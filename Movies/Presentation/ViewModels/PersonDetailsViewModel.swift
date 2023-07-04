@@ -38,13 +38,13 @@ class PersonDetailsViewModel: ObservableObject {
     func getBirthAndDeathDetails () -> some View{
         var birhtAndDeathDetails = ""
         
-        if let age = MyDateTools.calculateAge(from:person?.birthday ?? "") {
+        if let age = DateTools.calculateAge(from:person?.birthday ?? "") {
             if let deathDate = person?.deathday, !deathDate.isEmpty{
                 birhtAndDeathDetails = "\("died_at".localizedLanguage()): \(age) \("years_old".localizedLanguage()) \n"
             } else {
                 birhtAndDeathDetails += ("\(age) \(String(localized: "years_old")) \n")
             }
-            birhtAndDeathDetails += ("\("birthdate".localizedLanguage()): \(MyDateTools.format(this: person?.birthday ?? "")) \n")
+            birhtAndDeathDetails += ("\("birthdate".localizedLanguage()): \(DateTools.format(this: person?.birthday ?? "")) \n")
         }
         
         if let birthPlace = person?.placeOfBirth, !birthPlace.isEmpty {
@@ -52,7 +52,7 @@ class PersonDetailsViewModel: ObservableObject {
         }
         
         if let deathDate = person?.deathday, !deathDate.isEmpty{
-            birhtAndDeathDetails += ("\("date_of_death".localizedLanguage()): \(MyDateTools.format(this: deathDate)) \n")
+            birhtAndDeathDetails += ("\("date_of_death".localizedLanguage()): \(DateTools.format(this: deathDate)) \n")
         }
        
         if birhtAndDeathDetails.isEmpty {

@@ -116,7 +116,7 @@ struct MovieDetails: MediaDetails {
             backdrop: backdropPath,
             poster: posterPath,
             overview: overview,
-            date: MyDateTools.format(this: releaseDate ?? ""),
+            date: DateTools.format(this: releaseDate ?? ""),
             tagline: tagline,
             status: status,
             recommendations: recommendations,
@@ -199,7 +199,7 @@ struct TVDetails: MediaDetails {
     }
     
     var details: DetailsWrapper {
-        .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: MyDateTools.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos:  videos ?? Videos(results: []), accountState: accountStates
+        .init(id: id ?? 0 , title: name ?? "", genres: genres ?? [], backdrop: backdropPath, poster: posterPath, overview: overview ?? "", date: DateTools.format(this: firstAirDate ?? ""), tagline: tagline ?? "", status: status, recommendations: recommendations, similar: similar, credits: credits, seasons: seasons, videos:  videos ?? Videos(results: []), accountState: accountStates
 )
     }
    
@@ -485,5 +485,15 @@ struct VideosResult: Codable {
 
 
 
-
-
+// MARK: - FavoriteState
+struct FavoriteState: Codable {
+    var media_type: String
+    var media_id: Int
+    var favorite: Bool
+    
+    enum codingKeys: String, CodingKey{
+        case mediaType = "media_type"
+        case mediaID = "media_id"
+        case favorite
+    }
+}

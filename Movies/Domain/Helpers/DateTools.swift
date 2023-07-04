@@ -8,12 +8,12 @@
 import Foundation
 
 
-class MyDateTools {
+class DateTools {
     static let dateFormatter = DateFormatter()
   
 
     static func format(this date: String) -> String{
-        MyDateTools.dateFormatter.dateFormat = "yyyy-MM-dd"
+        DateTools.dateFormatter.dateFormat = "yyyy-MM-dd"
         if let date = dateFormatter.date(from: date) {
             dateFormatter.dateFormat = "dd MMM yyyy"
             let formattedDate = dateFormatter.string(from: date)
