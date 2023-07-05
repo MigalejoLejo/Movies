@@ -1,0 +1,30 @@
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/FavoriteButton.swift":
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/FavoriteButton.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/FavoriteButton.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/FavoriteButton.dia"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/FavoriteButton.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/Img.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Img.dia"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Img.o"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Img.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Img.swiftdeps"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/MediaDetailsViewModel.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsViewModel.dia"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsViewModel.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsViewModel.d"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsViewModel.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Domain/Models/HomeRow.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/HomeRow.dia"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/HomeRow.o"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/HomeRow.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/HomeRow.swiftdeps"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/WebView.swift":
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WebView.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WebView.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WebView.dia"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WebView.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/SubViews/MediaDetailsView.swift":
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsView.swiftdeps"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsView.o"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsView.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsView.dia"

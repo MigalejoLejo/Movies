@@ -1,0 +1,35 @@
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/MediaDetailsRowMore.swift":
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsRowMore.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsRowMore.swiftdeps"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsRowMore.o"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MediaDetailsRowMore.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Domain/Models/Endpoints.swift":
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Endpoints.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Endpoints.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Endpoints.dia"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Endpoints.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/DismissSheetButton.swift":
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/DismissSheetButton.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/DismissSheetButton.d"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/DismissSheetButton.o"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/DismissSheetButton.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Domain/Models/Results.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Results.o"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Results.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Results.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Results.swiftdeps"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/WarningComponent.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WarningComponent.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WarningComponent.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WarningComponent.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/WarningComponent.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/ImagesTabNav.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImagesTabNav.o"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImagesTabNav.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImagesTabNav.swiftdeps"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImagesTabNav.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/InputField.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/InputField.o"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/InputField.dia"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/InputField.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/InputField.d"

@@ -8,6 +8,8 @@
 import Foundation
 import CodableX
 import SwiftUI
+import MovieData
+
 
 class MediaDetailsViewModel: ObservableObject {
    

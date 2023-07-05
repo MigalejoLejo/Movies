@@ -1,0 +1,35 @@
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Views/SubViews/LoadingView.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoadingView.dia"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoadingView.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoadingView.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoadingView.d"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/LoginViewModel.swift":
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginViewModel.swiftdeps"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginViewModel.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginViewModel.d"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginViewModel.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Domain/Helpers/Warning.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Warning.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Warning.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Warning.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Warning.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Domain/Helpers/Dummy.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Dummy.o"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Dummy.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Dummy.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/Dummy.swiftdeps"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/LoginThumbnail.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginThumbnail.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginThumbnail.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginThumbnail.swiftdeps"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/LoginThumbnail.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/ImageCardRowMore.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRowMore.o"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRowMore.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRowMore.swiftdeps"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRowMore.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/ImageCardRow.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRow.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRow.d"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRow.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCardRow.swiftdeps"

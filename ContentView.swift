@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MovieData
 
 struct ContentView: View {
     

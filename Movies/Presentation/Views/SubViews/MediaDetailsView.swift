@@ -7,6 +7,9 @@
 
 import SwiftUI
 import Kingfisher
+import MovieData
+
+
 struct MediaDetailsView: View {
     
     @EnvironmentObject var contentViewModel:ContentViewModel

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MovieData
+
 
 struct Login: View {
     

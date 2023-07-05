@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MovieData
 
 extension String {
     func localizedLanguage() -> String {
@@ -20,6 +21,4 @@ extension String {
 }
 
 
-enum Language: String {
-    case de, en, es, systemDefault
-}
+

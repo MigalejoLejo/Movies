@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import MovieData
 
 class PersonDetailsViewModel: ObservableObject {
     var id: Int = 0

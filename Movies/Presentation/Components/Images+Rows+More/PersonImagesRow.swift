@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Kingfisher
+import MovieData
+
 
 struct PersonImagesRow: View {
     @Binding  var images:[Profile]

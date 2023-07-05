@@ -1,0 +1,30 @@
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/ContentViewModel.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ContentViewModel.o"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ContentViewModel.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ContentViewModel.swiftdeps"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ContentViewModel.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/MovieApp.swift":
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MovieApp.d"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MovieApp.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MovieApp.swiftdeps"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/MovieApp.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/ImageCard.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCard.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCard.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCard.d"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/ImageCard.dia"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/General/NavigationLable.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/NavigationLable.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/NavigationLable.d"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/NavigationLable.swiftdeps"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/NavigationLable.o"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/Components/Images+Rows+More/PosterRow.swift":
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PosterRow.o"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PosterRow.swiftdeps"
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PosterRow.dia"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PosterRow.d"
+"/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/Movies/Presentation/ViewModels/PersonDetailsViewModel.swift":
+  diagnostics: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PersonDetailsViewModel.dia"
+  swift-dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PersonDetailsViewModel.swiftdeps"
+  dependencies: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PersonDetailsViewModel.d"
+  object: "/Users/miguel/Documents/MigDev/SwiftApps/Tutorials/Movies/build/Movies.build/Debug-iphonesimulator/Movies.build/Objects-normal/arm64/PersonDetailsViewModel.o"

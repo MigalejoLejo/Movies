@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MovieData
 
 class LoginViewModel: ObservableObject {
     @Published var username:String = ""

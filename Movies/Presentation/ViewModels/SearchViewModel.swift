@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import MovieData
+
 
 
 class SearchViewModel: ObservableObject {

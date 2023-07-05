@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MovieData
+
 
 struct SettingsView: View {
     @State private var selectedContent: Language = Language(rawValue: UserService.sharedInstance.appLanguage) ?? .en

@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Kingfisher
+import MovieData
+
 
 struct SheetImage: View {
     
