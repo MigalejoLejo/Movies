@@ -12,7 +12,7 @@ import MovieData
 struct Login: View {
     
     @ObservedObject var loginViewModel = LoginViewModel()
-    @ObservedObject var homeViewModel = HomeViewModel()
+//    @ObservedObject var homeViewModel = HomeViewModel()
     
     @State private var showWarning: Bool = false
     @State private var loggingIn: Bool = false

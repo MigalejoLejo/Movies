@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4900E3712A542DAB005E29D8 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E3702A542DAB005E29D8 /* CreditsView.swift */; };
 		4900E3732A5440C1005E29D8 /* SheetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E3722A5440C1005E29D8 /* SheetImage.swift */; };
-		4900E3752A54428D005E29D8 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900E3742A54428D005E29D8 /* ColorHelper.swift */; };
 		4900E4622A54859F005E29D8 /* MovieData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4900E4612A548598005E29D8 /* MovieData.framework */; };
 		4900E4632A54859F005E29D8 /* MovieData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4900E4612A548598005E29D8 /* MovieData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4900E46C2A548746005E29D8 /* MovieData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4900E4612A548598005E29D8 /* MovieData.framework */; };
@@ -572,7 +571,6 @@
 				496364AA2A2E39D5009BCB9A /* Img.swift in Sources */,
 				49848B202A4D72C900B777C5 /* FavoriteButton.swift in Sources */,
 				4974ABBF2A3A135A0076A9EF /* View+Extensions.swift in Sources */,
-				4900E3752A54428D005E29D8 /* ColorHelper.swift in Sources */,
 				49848B122A4AD7B600B777C5 /* FavoritesView.swift in Sources */,
 				495726AA2A446AF200D9BD42 /* LottieView.swift in Sources */,
 				4927B1552A2F2A690088F83A /* Login.swift in Sources */,
